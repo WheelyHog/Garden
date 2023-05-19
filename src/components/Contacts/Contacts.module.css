@@ -1,0 +1,48 @@
+.wrapper {
+  margin: var(--margin-main) var(--spacing-ultralarge);
+  display: flex;
+  gap: 160px;
+}
+
+.title {
+  font-size: var(--header-text);
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.phone_number {
+  font-size: var(--grand-text);
+  font-weight: var(--bold-text);
+  margin-bottom: 32px;
+  white-space: nowrap;
+}
+
+.map_link {
+  font-size: var(--header-text);
+  font-weight: var(--bold-text);
+  margin-bottom: var(--spacing-medium);
+}
+
+.social {
+  display: flex;
+  gap: 70px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: var(--bold-text);
+}
+
+.social img {
+  width: 44px;
+  height: 44px;
+}
+
+.address p {
+  font-size: var(--sub-header-text);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.address b {
+  font-size: 24px;
+  font-weight: var(--bold-text);
+}

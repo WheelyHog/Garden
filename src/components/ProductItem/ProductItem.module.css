@@ -1,0 +1,39 @@
+.product_image_wrapper {
+  width: 300px;
+  height: 300px;
+}
+
+.product_image {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.product_price_container {
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.discount_price {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.price {
+  font-weight: var(--normal-text);
+  font-size: var(--info-text);
+  color: #8b8b8b;
+}
+
+.discount_value {
+  font-size: var(--info-text);
+  color: var(--pink-color);
+  font-weight: 600;
+}
+
+.product_title {
+  padding: 0 30px;
+  max-width: 300px;
+}

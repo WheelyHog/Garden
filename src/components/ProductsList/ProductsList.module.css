@@ -1,0 +1,16 @@
+.products_list_wrapper {
+  margin-top: 50px;
+}
+
+.products_list_title {
+  font-weight: var(--bold-text);
+  font-size: var(--header-text);
+  margin-bottom: var(--spacing-medium);
+}
+
+.products_list {
+  display: flex;
+  gap: var(--spacing-large);
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}

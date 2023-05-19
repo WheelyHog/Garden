@@ -1,0 +1,13 @@
+.category_image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: var(--spacing-medium);
+  display: block;
+}
+
+.category_title {
+  text-align: center;
+  font-weight: 600;
+  font-size: var(--sub-header-text);
+}
