@@ -17,9 +17,14 @@ export default function Sale() {
     }
   }
 
+  const styles = {
+    display: 'flex',
+    justifyContent: 'flex-start'
+  }
+
   return (
     <div className={s.sales_container}>
-      <ProductsList products={products_to_show} title='Sale' />
+      <ProductsList products={products_to_show} title='Sale' styles={styles} />
     </div>
   )
 }

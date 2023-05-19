@@ -1,11 +1,15 @@
 .product_image_wrapper {
   width: 300px;
   height: 300px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 25px;
+  margin-bottom: var(--spacing-medium);
 }
 
 .product_image {
   width: 100%;
-  border-radius: 25px;
 }
 
 .product_price_container {
@@ -25,6 +29,7 @@
   font-weight: var(--normal-text);
   font-size: var(--info-text);
   color: #8b8b8b;
+  text-decoration: line-through;
 }
 
 .discount_value {

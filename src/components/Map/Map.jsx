@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import s from './Map.module.css'
-import { useLoadScript, GoogleMap, Marker, InfoWindow } from '@react-google-maps/api'
+import { useLoadScript, GoogleMap, Marker } from '@react-google-maps/api'
+import logo from './assets/icon.png'
 
 export default function Map() {
 
@@ -21,7 +22,7 @@ export default function Map() {
           center={center}
           zoom={17}
         >
-          <Marker position={{ lat: 52.507791, lng: 13.375124 }} />
+          <Marker position={{ lat: 52.507791, lng: 13.375124 }} title='Tel-Ran.de' label='Tel-Ran.de' icon={logo} />
           {/* <InfoWindow>
             <h4>Tel-Ran.de</h4>
           </InfoWindow> */}

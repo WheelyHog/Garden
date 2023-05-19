@@ -6,7 +6,7 @@
   display: flex;
   gap: 100px;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .categories_title {
@@ -21,11 +21,19 @@
   border: 2px solid #8B8B8B;
   width: 120px;
   height: 30px;
+  cursor: pointer;
+  background-color: var(--white-color);
+  transition: var(--transition);
+}
+
+.categories_btn:hover {
+  color: var(--white-color);
+  background-color: #8B8B8B;
 }
 
 .categories_wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
   grid-auto-rows: minmax(250px, 1fr);
   gap: var(--spacing-large);
 }

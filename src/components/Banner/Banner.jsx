@@ -3,6 +3,7 @@ import s from './Banner.module.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import garden from './assets/garden.png'
+import { NavLink } from 'react-router-dom';
 
 export default function Banner() {
 
@@ -22,7 +23,7 @@ export default function Banner() {
             <div className={s.content}>
               <h1 className={s.title}>Sale </h1>
               <h2 className={s.sub_title}>New season</h2>
-              <button className={s.sale_btn}>Sale</button>
+              <NavLink to='/sales/all'><button className={s.sale_btn}>Sale</button></NavLink>
             </div>
             <div className={s.image_box}>
               <img className={s.image} src={garden} />
@@ -34,7 +35,7 @@ export default function Banner() {
             <div className={s.content}>
               <h1 className={s.title}>Sale </h1>
               <h2 className={s.sub_title}>New season</h2>
-              <button className={s.sale_btn}>Sale</button>
+              <NavLink to='/sales/all'><button className={s.sale_btn}>Sale</button></NavLink>
             </div>
             <div className={s.image_box}>
               <img className={s.image} src={garden} />
@@ -46,7 +47,7 @@ export default function Banner() {
             <div className={s.content}>
               <h1 className={s.title}>Sale </h1>
               <h2 className={s.sub_title}>New season</h2>
-              <button className={s.sale_btn}>Sale</button>
+              <NavLink to='/sales/all'><button className={s.sale_btn}>Sale</button></NavLink>
             </div>
             <div className={s.image_box}>
               <img className={s.image} src={garden} />
