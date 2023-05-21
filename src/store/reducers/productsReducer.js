@@ -1,7 +1,6 @@
 const defaultState = [];
 
 const GET_PRODUCTS = 'GET_PRODUCTS';
-const GET_RANDOM_PRODUCTS = 'GET_RANDOM_PRODUCTS';
 
 
 export const productsReducer = (state = defaultState, action) => {

@@ -10,11 +10,11 @@ import Sale from '../../components/Sale/Sale';
 
 export default function HomePage() {
   const dispatch = useDispatch()
-  const products = useSelector(store => store.products)
   const categories = useSelector(store => store.categories)
+  const products = useSelector(store => store.products)
 
-  useEffect(() => { dispatch(fetchProductsList()) }, [])
   useEffect(() => { dispatch(fetchCategoriesList()) }, [])
+  useEffect(() => { dispatch(fetchProductsList()) }, [])
 
   const categories_to_show = categories.slice(0, 4)
 

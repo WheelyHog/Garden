@@ -11,8 +11,6 @@ export default function AllCategoriesPage() {
   const categories = useSelector(store => store.categories)
   // useEffect(() => { dispatch(fetchCategoriesList()) }, [])
 
-  console.log(categories);
-
   return (
     <div>
       <CategoriesList categories={categories} show_btn={false} title='Categories' />

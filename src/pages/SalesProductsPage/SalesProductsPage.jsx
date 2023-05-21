@@ -14,7 +14,7 @@ export default function SalesProductsPage() {
   }
 
   return (
-    <div>
+    <div className={s.products_list}>
       <ProductsList products={products_to_show} title='Products with sale' styles={styles} />
     </div>
   )

@@ -3,6 +3,7 @@ import ProductItem from '../ProductItem/ProductItem';
 import s from './ProductsList.module.css'
 
 export default function ProductsList({ products, title, styles }) {
+  console.log(products);
   return (
     <div className={s.products_list_wrapper}>
       <h2 className={s.products_list_title}>{title}</h2>

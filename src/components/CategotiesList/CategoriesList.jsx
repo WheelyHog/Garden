@@ -11,7 +11,7 @@ export default function CategoriesList({ categories, show_btn, title }) {
         {show_btn && <NavLink to='/catalog'><button className={s.categories_btn}>All categories</button></NavLink>}
       </div>
       <div className={s.categories_wrapper}>
-        {categories.map(elem => <CategoryItem {...elem} key={elem.id} />)}
+        {categories.map(elem => <NavLink to={`/categories/${elem.id}`} key={elem.id}><CategoryItem {...elem} /></NavLink>)}
       </div>
     </div>
   )
