@@ -23,7 +23,7 @@ export default function Sale() {
   }
 
   return (
-    <div className={s.sales_container}>
+    <div className={s.sales_container} id='sales'>
       <ProductsList products={products_to_show} title='Sale' styles={styles} />
     </div>
   )

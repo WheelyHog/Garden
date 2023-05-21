@@ -1,11 +1,12 @@
-const defaultState = []
+const defaultState = {}
 
 const GET_CATEGORY_PRODUCTS = 'GET_CATEGORY_PRODUCTS'
 
 export const categoryProductsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case GET_CATEGORY_PRODUCTS:
-      return action.payload
+      console.log("reducer: " + action.payload);
+      return { ...action.payload }
 
     default:
       return state;

@@ -3,6 +3,7 @@ import s from './Header.module.css';
 import logo from './assets/logo.png';
 import cart from './assets/cart.png'
 import { NavLink } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 
 export default function Header() {
 
@@ -16,7 +17,7 @@ export default function Header() {
     <div className={s.header}>
       <div className={s.logo_wrapper}>
         <NavLink to='/'><img src={logo} alt="logo" /></NavLink>
-        <NavLink to='/catalog'><button className={s.header_btn}>Catalog</button></NavLink>
+        <HashLink smooth to='#categories'><button className={s.header_btn}>Catalog</button></HashLink>
       </div>
       <div className={s.nav_menu}>
         {menu_list.map(elem => <NavLink to={elem.link} key={elem.id}>{elem.title}</NavLink>)}

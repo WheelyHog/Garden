@@ -8,32 +8,39 @@ import s from './CategoryProductsPage.module.css'
 
 
 export default function CategoryProductsPage() {
+
+  console.log('CategoryProductsPage');
   const { id } = useParams()
 
   const dispatch = useDispatch()
 
   const category_products = useSelector(store => store.category_products)
-  const [products, setProducts] = useState([])
+  // const [products, setProducts] = useState([])
 
   useEffect(() => dispatch(fetchCategoryProducts(id)), [])
-  useEffect(() => setProducts(category_products.data), [])
+  // useEffect(() => category_products.data ?? setProducts(category_products.data), [])
 
   const styles = {
     display: 'flex',
     justifyContent: 'space-between'
   }
-  console.log(category_products);
-  const { category, data } = category_products
-  console.log(category);
-  console.log(data);
+  // console.log(category_products);
+  // console.log(category_products.data);
+  // const { category, data } = category_products
+  // console.log(category);
+  // console.log(data);
 
-  while (!products) {
-    return <p>Loading...</p>;
-  }
+  // while (!products) {
+  //   return <p>Loading...</p>;
+  // }
+
+  const title = category_products.data ? category_products.category.title : ''
+  const data = category_products.data ? category_products.data : []
 
   return (
     <div className={s.products_list}>
-      <ProductsList products={products} title='' styles={styles} />
+
+      <ProductsList products={data} title={title} styles={styles} />
     </div>
   )
 }
