@@ -9,13 +9,9 @@ import s from './CategoryProductsPage.module.css'
 
 export default function CategoryProductsPage() {
 
-  console.log('CategoryProductsPage');
   const { id } = useParams()
-
   const dispatch = useDispatch()
-
   const category_products = useSelector(store => store.category_products)
-
   useEffect(() => dispatch(fetchCategoryProducts(id)), [])
 
   const styles = {

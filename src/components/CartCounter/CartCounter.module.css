@@ -1,0 +1,16 @@
+.counter {
+  background-color: brown;
+  height: 20px;
+  width: 20px;
+  color: var(--white-color);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 17px;
+  right: -12px;
+}
+
+.counter p {
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+}

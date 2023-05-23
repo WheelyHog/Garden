@@ -4,6 +4,7 @@ import logo from './assets/logo.png';
 import cart from './assets/cart.png'
 import { NavLink } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
+import CartCounter from '../CartCounter/CartCounter'
 
 export default function Header() {
 
@@ -23,6 +24,7 @@ export default function Header() {
         {menu_list.map(elem => <NavLink to={elem.link} key={elem.id}>{elem.title}</NavLink>)}
       </div>
       <NavLink to='/cart'><img src={cart} alt='cart_image' /></NavLink>
+      <CartCounter className={s.cart_counter} />
     </div>
   )
 }

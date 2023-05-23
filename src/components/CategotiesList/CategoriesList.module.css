@@ -41,6 +41,7 @@
 .categories_wrapper a {
   text-decoration: none;
   color: var(--black-color);
+  transition: all var(--transition);
 }
 
 .categories_wrapper a:hover {
