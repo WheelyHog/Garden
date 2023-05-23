@@ -6,6 +6,7 @@
   overflow: hidden;
   border-radius: 25px;
   margin-bottom: var(--spacing-medium);
+  position: relative;
 }
 
 .product_image {
@@ -41,4 +42,32 @@
 .product_title {
   padding: 0 30px;
   max-width: 300px;
+}
+
+.add_btn {
+  position: absolute;
+  bottom: -100%;
+  left: 10px;
+  width: 280px;
+  height: 70px;
+  background-color: #F1FFF1;
+  border: 2px solid var(--primary-color);
+  border-radius: 21px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: var(--sub-header-text);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.product_image_wrapper:hover .add_btn {
+  opacity: 1;
+  cursor: pointer;
+  bottom: var(--spacing-small);
+  left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
 }

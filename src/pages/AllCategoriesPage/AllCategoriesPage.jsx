@@ -6,10 +6,10 @@ import s from './AllCategoriesPage.module.css'
 
 export default function AllCategoriesPage() {
 
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
+  useEffect(() => { dispatch(fetchCategoriesList()) }, [])
 
   const categories = useSelector(store => store.categories)
-  // useEffect(() => { dispatch(fetchCategoriesList()) }, [])
 
   return (
     <div>

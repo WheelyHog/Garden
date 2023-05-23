@@ -15,3 +15,4 @@ export const productsReducer = (state = defaultState, action) => {
 
 
 export const getProductsAction = (payload) => ({ type: GET_PRODUCTS, payload })
+

@@ -8,6 +8,7 @@ const products_url = base_url + "/products/all";
 const categories_url = base_url + "/categories/all";
 const category_products_url = base_url + "/categories/"
 
+
 export const fetchProductsList = () => {
   return function (dispatch) {
     fetch(products_url)
@@ -30,5 +31,4 @@ export const fetchCategoryProducts = (id) => {
       .then(res => res.json())
       .then(data => dispatch(getCategoryProductsAction(data)))
   }
-
 }
