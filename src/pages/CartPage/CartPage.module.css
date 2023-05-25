@@ -1,0 +1,15 @@
+.cart_list_wrapper {
+  margin-top: 50px;
+}
+
+.title {
+  font-weight: var(--bold-text);
+  font-size: var(--header-text);
+  margin-bottom: 70px;
+}
+
+.warning {
+  font-size: var(--header-text-small);
+  color: brown;
+  font-weight: var(--bold-text);
+}

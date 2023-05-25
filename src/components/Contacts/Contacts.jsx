@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './Contacts.module.css'
-import insta from './assets/insta.png'
-import whatsapp from './assets/whatsapp.png'
+import { SlSocialInstagram } from 'react-icons/sl'
+import { BsWhatsapp } from 'react-icons/bs'
 
 export default function Contacts() {
   return (
@@ -12,11 +12,13 @@ export default function Contacts() {
           <h2 className={s.phone_number}>+49 999 999 99 99</h2>
           <div className={s.social}>
             <div>
-              <img src={insta} alt="instagarm" />
+              <SlSocialInstagram className={s.social_img} />
+
               <p>instagram</p>
             </div>
             <div>
-              <img src={whatsapp} alt="whatsapp" />
+              <BsWhatsapp className={s.social_img} />
+
               <p>WhatsApp</p>
             </div>
 

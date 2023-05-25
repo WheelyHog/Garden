@@ -20,6 +20,11 @@
 .nav_menu a {
   color: var(--black-color);
   text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav_menu a:hover {
+  color: var(--primary-color);
 }
 
 .nav_menu :global(a.active) {
@@ -42,4 +47,6 @@
   background-color: var(--white-color);
 }
 
-.cart_counter {}
+.cart {
+  font-size: 30px;
+}

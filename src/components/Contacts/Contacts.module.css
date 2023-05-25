@@ -31,9 +31,14 @@
   font-weight: var(--bold-text);
 }
 
-.social img {
-  width: 44px;
-  height: 44px;
+.social_img {
+  font-size: 44px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.social_img:hover {
+  color: var(--primary-color);
 }
 
 .address p {

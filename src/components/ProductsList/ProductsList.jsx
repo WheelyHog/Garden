@@ -7,7 +7,7 @@ export default function ProductsList({ products, title, styles }) {
     <div className={s.products_list_wrapper}>
       <h2 className={s.products_list_title}>{title}</h2>
       <div className={s.products_list} style={styles}>
-        {products.map(elem => <ProductItem {...elem} key={elem.id} />)}
+        {products.map(elem => <ProductItem product={elem} key={elem.id} />)}
       </div>
     </div>
   )

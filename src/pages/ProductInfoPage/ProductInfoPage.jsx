@@ -23,6 +23,7 @@ export default function ProductInfoPage() {
   const discount_value = Math.floor(100 - discont_price * 100 / price);
 
   const cart = useSelector(store => store.cart);
+
   return (
     <div className={s.product_info}>
       <h2 className={s.product_title}>{title}</h2>
@@ -34,7 +35,7 @@ export default function ProductInfoPage() {
             {discont_price && <p className={s.price}>{price}$</p>}
             {discont_price && <p className={s.discount_value}>{-discount_value}%</p>}
           </div>
-          <button className={s.add_btn} onClick={() => dispatch(addToCartAction(product))}>To cart</button>
+          <button className={s.add_btn} onClick={() => dispatch(addToCartAction(product[0]))}>To cart</button>
           <h4 className={s.product_subtitle}>Description</h4>
           <p className={s.product_text}>{description}</p>
         </div>
