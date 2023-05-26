@@ -2,6 +2,13 @@
   margin-top: 50px;
 }
 
+.cart_list_container {
+  display: flex;
+  gap: 60px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .title {
   font-weight: var(--bold-text);
   font-size: var(--header-text);

@@ -1,7 +1,8 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { decrementCountAction, incrementCountAction } from '../../store/reducers/cartReducer';
+import { decrementCountAction, incrementCountAction, removeFromCartAction } from '../../store/reducers/cartReducer';
 import s from './CartItem.module.css'
+import { RxCross1 } from 'react-icons/rx'
 
 export default function CartItem({ id, title, image, count, discont_price, price }) {
   const base_url = 'http://localhost:3333';
@@ -20,6 +21,7 @@ export default function CartItem({ id, title, image, count, discont_price, price
       </div>
       <h2 className={s.discount_price}>{discont_price ? discont_price : price}$</h2>
       {discont_price && <h3 className={s.price}>{price}$</h3>}
+      <RxCross1 className={s.close_btn} onClick={() => dispatch(removeFromCartAction(id))} />
     </div>
   )
 }

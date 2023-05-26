@@ -3,6 +3,7 @@
   gap: 30px;
   padding: 40px 0;
   border-bottom: 1px solid #a7a7a7;
+  position: relative;
 }
 
 .cart_img {
@@ -70,5 +71,13 @@
   font-weight: var(--normal-text);
   color: #8b8b8b;
   text-decoration: line-through;
+  padding-right: 70px;
+}
 
+.close_btn {
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 0;
 }
