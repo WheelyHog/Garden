@@ -11,7 +11,7 @@ export default function ProductInfoPage() {
   const base_url = "http://localhost:3333";
 
   useEffect(() => {
-
+    window.scrollTo(0, 0);
     const product_url = base_url + '/products/';
     fetch(`${product_url}${id}`)
       .then(res => res.json())

@@ -1,5 +1,5 @@
 .map {
-  padding: 40px;
+  padding: var(--spacing-large);
   ;
 }
 

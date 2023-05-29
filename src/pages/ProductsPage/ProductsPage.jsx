@@ -6,11 +6,12 @@ import s from './ProductsPage.module.css'
 
 export default function ProductsPage() {
   const dispatch = useDispatch()
-  useEffect(() => { dispatch(fetchProductsList()) }, [])
+  useEffect(() => {
+    dispatch(fetchProductsList())
+    window.scrollTo(0, 0);
+  }, [])
 
   const products = useSelector(store => store.products)
-
-
 
   const styles = {
     display: 'flex',
@@ -19,7 +20,13 @@ export default function ProductsPage() {
 
   return (
     <div className={s.products_list}>
-      <ProductsList products={products} title='All products' styles={styles} />
+      <ProductsList
+        products={products}
+        title='All products'
+        styles={styles}
+        show_filter={true}
+        show_discont_sort={true}
+        location='all_products' />
     </div>
   )
 }

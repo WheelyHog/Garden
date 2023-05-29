@@ -39,6 +39,10 @@
   font-size: var(--paragraph-text);
 }
 
+body {
+  background: #E5E5E5;
+}
+
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -46,4 +50,6 @@
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  background-color: var(--white-color);
+  padding-top: 20px;
 }

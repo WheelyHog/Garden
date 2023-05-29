@@ -28,6 +28,13 @@
   font-size: 32px;
 }
 
+form {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .phone_input {
   height: 70px;
   border: 1px solid var(--black-color);
@@ -35,7 +42,8 @@
   border-radius: 20px;
   outline: none;
   font-size: var(--sub-header-text);
-  width: 450px;
+  width: 100%;
+  background-color: var(--white-color);
 }
 
 .order_btn {

@@ -1,5 +1,21 @@
 .cart_list_wrapper {
-  margin-top: 50px;
+  margin: 50px 30px;
+}
+
+.back_link_wrapper {
+  margin-right: 560px;
+  margin-bottom: 34px;
+  display: flex;
+  gap: 17px;
+  justify-content: flex-end;
+}
+
+.back_link {
+  font-size: var(--info-text);
+}
+
+.arrow {
+  margin-top: 5px;
 }
 
 .cart_list_container {

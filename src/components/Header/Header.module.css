@@ -1,5 +1,5 @@
 .header {
-  margin: var(--spacing-medium) var(--spacing-large);
+  margin: 0 var(--spacing-large);
   display: flex;
   align-items: center;
   justify-content: space-between;

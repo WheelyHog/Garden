@@ -60,6 +60,12 @@
   transition: var(--transition);
 }
 
+.add_btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: 2px solid var(--white-color);
+}
+
 .product_image_wrapper:hover .add_btn {
   opacity: 1;
   cursor: pointer;

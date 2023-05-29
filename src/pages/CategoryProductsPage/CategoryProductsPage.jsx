@@ -7,12 +7,16 @@ import s from './CategoryProductsPage.module.css'
 
 
 
+
 export default function CategoryProductsPage() {
 
   const { id } = useParams()
   const dispatch = useDispatch()
   const category_products = useSelector(store => store.category_products)
-  useEffect(() => dispatch(fetchCategoryProducts(id)), [])
+  useEffect(() => {
+    dispatch(fetchCategoryProducts(id))
+    window.scrollTo(0, 0);
+  }, [])
 
   const styles = {
     display: 'flex',
@@ -24,8 +28,13 @@ export default function CategoryProductsPage() {
 
   return (
     <div className={s.products_list}>
-
-      <ProductsList products={data} title={title} styles={styles} />
+      {<ProductsList
+        products={data}
+        title={title}
+        styles={styles}
+        show_filter={true}
+        show_discont_sort={true}
+        location='category_products' />}
     </div>
   )
 }

@@ -5,12 +5,12 @@
 .products_list_title {
   font-weight: var(--bold-text);
   font-size: var(--header-text);
-  margin-bottom: var(--spacing-medium);
+  margin-bottom: 80px;
 }
 
 .products_list {
+  margin: var(--spacing-ultralarge) 0 80px;
   display: flex;
   gap: var(--spacing-large);
-  margin-bottom: 80px;
   flex-wrap: wrap;
 }

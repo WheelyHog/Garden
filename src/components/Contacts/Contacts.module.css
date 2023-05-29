@@ -1,5 +1,5 @@
 .wrapper {
-  margin: var(--margin-main) var(--spacing-ultralarge);
+  margin: var(--margin-main) var(--spacing-large);
   display: flex;
   gap: 160px;
 }

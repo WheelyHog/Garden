@@ -1,0 +1,131 @@
+.filter_container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+input,
+select {
+  height: 40px;
+  border-radius: 7px;
+  border: 1px solid var(--black-color);
+  outline: none;
+}
+
+select {
+  width: 220px;
+  padding-left: 10px;
+  color: #797979;
+  margin-left: 50px;
+}
+
+label {
+  font-weight: 600;
+  font-size: var(--info-text);
+  margin-right: 5px;
+}
+
+.filter_price input {
+  width: 100px;
+}
+
+.filter_price,
+.filter_discount,
+.filter_sort {
+  display: flex;
+  align-items: center;
+}
+
+.filter_price input,
+.filter_sort input {
+  padding-left: 10px;
+}
+
+.filter_price {
+  display: flex;
+  gap: 15px;
+}
+
+.filter_sort {
+  margin-left: 80px;
+}
+
+/* =============== customize checkbox ================= */
+
+.filter_discount_title {
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.filter_discount_title input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+}
+
+.checkmark {
+  position: absolute;
+  top: -7px;
+  right: -70px;
+  height: 40px;
+  width: 40px;
+  border-radius: 7px;
+  border: 1px solid black;
+}
+
+.filter_discount_title:hover input~.checkmark {
+  background-color: var(--white-color);
+}
+
+.filter_discount_title input:checked~.checkmark {
+  background-color: var(--primary-color);
+}
+
+.checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.filter_discount_title input:checked~.checkmark::after {
+  display: block;
+}
+
+.filter_discount_title .checkmark::after {
+  left: 13px;
+  top: 3px;
+  width: 11px;
+  height: 20px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* ===================== customize input type number ============= */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* ==================== customize select ================================== */
+
+.filter_sort select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: url('./assets/arrow-down.png');
+  background-repeat: no-repeat;
+  background-position: right+5px center;
+  background-size: 10px;
+}

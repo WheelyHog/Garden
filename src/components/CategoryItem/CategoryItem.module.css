@@ -1,5 +1,6 @@
 .category_item {
   transition: var(--transititon);
+  overflow: hidden;
 }
 
 .category_image {
@@ -8,6 +9,13 @@
   object-fit: cover;
   margin-bottom: var(--spacing-medium);
   display: block;
+  filter: brightness(80%);
+  transition: filter .3s;
+}
+
+.category_image:hover {
+  filter: brightness(100%);
+  transition: filter .3s;
 }
 
 .category_title {
