@@ -59,7 +59,9 @@ export const productsReducer = (state = defaultState, action) => {
         from = -Infinity;
       }
       return [...state].map(product => ({
-        ...product, showByRange: product.price >= from && product.price <= to
+        ...product, showByRange:
+          (product.discont_price ? product.discont_price : product.price) >= from
+          && (product.discont_price ? product.discont_price : product.price) <= to
       }))
 
     default:

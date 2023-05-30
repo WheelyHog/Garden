@@ -48,7 +48,9 @@ export const categoryProductsReducer = (state = defaultState, action) => {
       }
       return {
         ...state, data: state.data.map(elem => ({
-          ...elem, showByRange: elem.price >= from && elem.price <= to
+          ...elem, showByRange:
+            (elem.discont_price ? elem.discont_price : elem.price) >= from
+            && (elem.discont_price ? elem.discont_price : elem.price) <= to
         })
         )
       }
