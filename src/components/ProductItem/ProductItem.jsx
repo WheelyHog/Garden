@@ -19,7 +19,7 @@ export default function ProductItem({ product }) {
     <NavLink to={`/products/${id}`}>
       <div className={s.product_item}>
         <div className={s.product_image_wrapper}>
-          <img className={s.product_image} src={`${baseUrl}${image}`} />
+          <img className={s.product_image} src={`${baseUrl}${image}`} alt={title} />
           <button className={s.add_btn} onClick={addToCartHandler}>Add To Cart</button>
         </div>
         <div className={s.product_price_container}>

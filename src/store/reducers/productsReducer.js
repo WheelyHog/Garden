@@ -6,9 +6,7 @@ const SORT_PRODUCTS_BY_DEFAULT = 'SORT_PRODUCTS_BY_DEFAULT'
 const SORT_PRODUCTS_BY_PRICE_DESC = 'SORT_PRODUCTS_BY_PRICE_DESC'
 const SORT_PRODUCTS_BY_PRICE_ASC = 'SORT_PRODUCTS_BY_PRICE_ASC'
 const SORT_PRODUCTS_BY_NAME = 'SORT_PRODUCTS_BY_NAME'
-
-// const FILTER_BY_RANGE = 'FILTER_BY_RANGE'
-
+const FILTER_PRODUCTS_BY_RANGE = 'FILTER_PRODUCTS_BY_RANGE'
 
 
 export const productsReducer = (state = defaultState, action) => {
@@ -45,11 +43,24 @@ export const productsReducer = (state = defaultState, action) => {
       return [...state].sort((a, b) => {
         const a_price = a.discont_price ? a.discont_price : a.price;
         const b_price = b.discont_price ? b.discont_price : b.price;
-        return b_price - a_price
+        return a_price - b_price
       })
 
     case SORT_PRODUCTS_BY_NAME:
       return [...state].sort((a, b) => a.title.localeCompare(b.title))
+
+    case FILTER_PRODUCTS_BY_RANGE:
+      console.log(action.payload);
+      let { from, to } = action.payload;
+      if (isNaN(to)) {
+        to = Infinity;
+      }
+      if (isNaN(from)) {
+        from = -Infinity;
+      }
+      return [...state].map(product => ({
+        ...product, showByRange: product.price >= from && product.price <= to
+      }))
 
     default:
       return state
@@ -63,5 +74,6 @@ export const sortByDefaultAction = () => ({ type: SORT_PRODUCTS_BY_DEFAULT })
 export const sortByPriceDescAction = () => ({ type: SORT_PRODUCTS_BY_PRICE_DESC })
 export const sortByPriceAscAction = () => ({ type: SORT_PRODUCTS_BY_PRICE_ASC })
 export const sortByNameAction = () => ({ type: SORT_PRODUCTS_BY_NAME })
+export const filterByRangeAction = (payload) => ({ type: FILTER_PRODUCTS_BY_RANGE, payload })
 
 

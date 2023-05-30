@@ -12,7 +12,7 @@ export default function ProductsList({ products, title, styles, show_filter, sho
       <h2 className={s.products_list_title}>{title}</h2>
       {show_filter && <Filter show_discont_sort={show_discont_sort} location={location} />}
       <div className={s.products_list} style={styles}>
-        {products.map(elem => <ProductItem product={elem} key={elem.id} />)}
+        {products.length === 0 ? <p>There is no products in such price interval</p> : products.map(elem => <ProductItem product={elem} key={elem.id} />)}
       </div>
     </div>
   )

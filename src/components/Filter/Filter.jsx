@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { filterCategoryProductsBySaleAction, sortCategoryProductsByDefaultAction, sortCAtegoryProductsByNameAction, sortCategoryProductsByPriceAscAction, sortCategoryProductsByPriceDescAction } from '../../store/reducers/categoryProductsReducer';
-import { filterBySaleAction, sortByDefaultAction, sortByNameAction, sortByPriceAscAction, sortByPriceDescAction } from '../../store/reducers/productsReducer';
+import { filterCategoryProductsByRangeAction, filterCategoryProductsBySaleAction, sortCategoryProductsByDefaultAction, sortCategoryProductsByNameAction, sortCategoryProductsByPriceAscAction, sortCategoryProductsByPriceDescAction } from '../../store/reducers/categoryProductsReducer';
+import { filterByRangeAction, filterBySaleAction, sortByDefaultAction, sortByNameAction, sortByPriceAscAction, sortByPriceDescAction } from '../../store/reducers/productsReducer';
 import s from './Filter.module.css'
 
 export default function Filter({ show_discont_sort, location }) {
@@ -26,7 +26,7 @@ export default function Filter({ show_discont_sort, location }) {
         break
 
       case 'name':
-        dispatch(location === 'category_products' ? sortCAtegoryProductsByNameAction() : sortByNameAction())
+        dispatch(location === 'category_products' ? sortCategoryProductsByNameAction() : sortByNameAction())
         break
 
       default:
@@ -34,13 +34,32 @@ export default function Filter({ show_discont_sort, location }) {
     }
   }
 
+  const [fromValue, setFromValue] = useState('from');
+  const [toValue, setToValue] = useState('to');
+
+  const handleChange = (e) => {
+    const range = {
+      from: fromValue,
+      to: toValue
+    }
+    const { value } = e.target;
+    if (e.target.name === 'from') {
+      range.from = value
+      setFromValue(Number(value))
+    } else {
+      range.to = value
+      setToValue(Number(value))
+    }
+
+    dispatch(location === 'category_products' ? filterCategoryProductsByRangeAction(range) : filterByRangeAction(range))
+  }
 
   return (
     <div className={s.filter_container}>
       <div className={s.filter_price}>
         <label className={s.filter_price_title}>Price</label>
-        <input type="text" placeholder="from" name="from" />
-        <input type="text" placeholder="to" name="to" />
+        <input type="number" placeholder="from" name="from" min='0' onChange={handleChange} value={fromValue} />
+        <input type="number" placeholder="to" name="to" mon='0' onChange={handleChange} value={toValue} />
       </div>
       {show_discont_sort && <div className={s.filter_discount}>
         <label className={s.filter_discount_title}>Discounted items
