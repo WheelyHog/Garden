@@ -126,6 +126,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   background-image: url('./assets/arrow-down.png');
   background-repeat: no-repeat;
-  background-position: right+5px center;
+  background-position: 205px center;
   background-size: 10px;
 }
