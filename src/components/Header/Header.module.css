@@ -3,13 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 
 .logo_wrapper {
   display: flex;
   align-items: center;
   gap: 60px;
+  position: relative;
+  z-index: 3;
 }
 
 .nav_menu {
@@ -49,4 +50,110 @@
 
 .cart {
   font-size: 30px;
+}
+
+.cart_wrapper {
+  position: relative;
+  z-index: 3;
+}
+
+/* =======================burger================== */
+.burger {
+  width: 30px;
+  display: none;
+  flex-direction: column;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.burger_active {
+  position: relative;
+  z-index: 3;
+}
+
+.burger_line {
+  height: 4px;
+  width: 30px;
+  background-color: #21243D;
+  transition: all .5s;
+  border-radius: 2px;
+}
+
+.burger_active .burger_line:first-child {
+  rotate: 45deg;
+  translate: 0px 0px;
+  background-color: #fff;
+}
+
+.burger_active .burger_line:nth-child(2) {
+  rotate: 45deg;
+  translate: 0px -4px;
+  background-color: #fff;
+}
+
+.burger_active .burger_line:last-child {
+  rotate: -45deg;
+  translate: 0 -8px;
+  background-color: #fff;
+}
+
+/* ================= mobile menu ================ */
+.mobile_menu {
+  position: absolute;
+  height: 100vh;
+  width: 0vw;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transform: translateX(-100px);
+  transition: width .5s;
+}
+
+.mobile_menu_active {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width .5s;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile_menu_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mobile_menu_list li {
+  color: #fff;
+  font-size: 24px;
+}
+
+/* =================================================== */
+@media (max-width: 780px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav_menu {
+    display: none;
+  }
+
+  .header_btn {
+    display: none;
+  }
+
+  .logo_wrapper {
+    gap: 0;
+  }
 }
