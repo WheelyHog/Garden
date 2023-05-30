@@ -26,7 +26,7 @@ export default function Banner() {
               <HashLink smooth to='#sales'><button className={s.sale_btn}>Sale</button></HashLink>
             </div>
             <div className={s.image_box}>
-              <img className={s.image} src={garden} />
+              <img className={s.image} src={garden} alt='garden' />
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@
 .banner_sale {
   display: flex;
   gap: 100px;
+  height: 600px;
 }
 
 .slide1 {
@@ -65,4 +66,44 @@
 .image {
   height: 100%;
   float: right;
+}
+
+@media (max-width:1080px) {
+  .banner_sale {
+    gap: 20px;
+  }
+
+  .title {
+    font-size: var(--grand-text);
+  }
+
+  .sub_title {
+    font-size: var(--header-text);
+  }
+
+  .content {
+    margin: auto 50px;
+  }
+}
+
+@media (max-width:990px) {
+  .banner_sale {
+    justify-content: center;
+    position: relative;
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 100px;
+    text-shadow: 2px 2px 15px black;
+  }
+
+  .image {
+    margin: 0;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 75%;
+  }
 }

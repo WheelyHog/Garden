@@ -33,8 +33,7 @@
 
 .categories_wrapper {
   display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr));
-  grid-auto-rows: minmax(250px, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-large);
 }
 
@@ -46,4 +45,28 @@
 
 .categories_wrapper a:hover {
   color: var(--primary-color);
+}
+
+@media (max-width: 1150px) {
+  .categories_wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 990px) {
+  .categories_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 690px) {
+  .categories_wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:500px) {
+  .categories_title {
+    font-size: var(--header-text-small);
+  }
 }

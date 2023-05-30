@@ -51,3 +51,38 @@
   font-size: 24px;
   font-weight: var(--bold-text);
 }
+
+@media (max-width:1150px) {
+  .phone_number {
+    font-size: var(--header-text);
+  }
+
+  .map_link {
+    font-size: var(--header-text-small);
+  }
+}
+
+@media (max-width: 990px) {
+  .wrapper {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 780px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .title,
+  .phone_number {
+    font-size: var(--header-text-small);
+  }
+
+  .map_link,
+  .address b {
+    font-size: var(--sub-header-text);
+  }
+}

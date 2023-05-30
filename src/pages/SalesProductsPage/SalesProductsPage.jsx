@@ -14,17 +14,11 @@ export default function SalesProductsPage() {
 
   const products_to_show = products.filter(product => product.discont_price !== null)
 
-  const styles = {
-    display: 'flex',
-    justifyContent: 'space-between'
-  }
-
   return (
     <div className={s.products_list}>
       <ProductsList
         products={products_to_show}
         title='Products with sale'
-        styles={styles}
         show_filter={true}
         show_discont_sort={false}
         location='all_sales' />

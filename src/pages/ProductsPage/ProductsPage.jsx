@@ -13,17 +13,11 @@ export default function ProductsPage() {
 
   const products = useSelector(store => store.products)
 
-  const styles = {
-    display: 'flex',
-    justifyContent: 'space-between'
-  }
-
   return (
     <div className={s.products_list}>
       <ProductsList
         products={products}
         title='All products'
-        styles={styles}
         show_filter={true}
         show_discont_sort={true}
         location='all_products' />
