@@ -89,12 +89,12 @@
 }
 
 .burger_active .burger_line:nth-child(2) {
-  transform: rotate(45deg) translate(0px 9px);
+  transform: rotate(45deg) translate(0px 7px);
   background-color: #fff;
 }
 
 .burger_active .burger_line:last-child {
-  transform: rotate(-45deg) translate(0 5px);
+  transform: rotate(-45deg) translate(-3px 5px);
   background-color: #fff;
 }
 
