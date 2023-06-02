@@ -60,6 +60,7 @@
 /* =======================burger================== */
 .burger {
   width: 30px;
+  height: 30px;
   display: none;
   flex-direction: column;
   gap: 7px;
@@ -69,6 +70,7 @@
 .burger_active {
   position: relative;
   z-index: 3;
+  height: 30px;
 }
 
 .burger_line {
