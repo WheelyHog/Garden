@@ -70,3 +70,10 @@
     font-size: var(--header-text-small);
   }
 }
+
+@media (max-width: 400px) {
+  .categories_header {
+    gap: 0;
+    justify-content: space-between;
+  }
+}

@@ -3,9 +3,10 @@
   flex-direction: column;
   gap: 50px;
   padding: 25px;
-  width: 500px;
+  max-width: 500px;
   border: 2px solid var(--black-color);
   border-radius: 21px;
+  align-self: center;
 }
 
 .order_title {
@@ -16,6 +17,7 @@
 .order_sum {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .order_text {
@@ -61,4 +63,25 @@ form {
 .order_btn:hover {
   background-color: var(--white-color);
   color: var(--primary-color);
+}
+
+@media (max-width: 562px) {
+
+  .order,
+  .order form {
+    width: 100%;
+  }
+
+  .phone_input,
+  .order_btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .phone_input,
+  .order_btn {
+    height: 50px;
+  }
 }

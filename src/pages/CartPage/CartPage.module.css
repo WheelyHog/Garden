@@ -36,3 +36,13 @@
   color: brown;
   font-weight: var(--bold-text);
 }
+
+@media (max-width: 1150px) {
+  .cart_list_container {
+    flex-direction: column;
+  }
+
+  .back_link_wrapper {
+    margin-right: 0;
+  }
+}

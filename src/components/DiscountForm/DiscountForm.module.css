@@ -98,3 +98,17 @@
     width: 100%;
   }
 }
+
+@media (max-width:500px) {
+  .discount_img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .discount_input,
+  .discount_btn {
+    height: 50px;
+  }
+}

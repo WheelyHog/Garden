@@ -24,7 +24,7 @@
   font-weight: 600;
   font-size: var(--sub-header-text);
   color: var(--dark-gray);
-  width: 320px;
+  max-width: 320px;
 }
 
 .counter_box {
@@ -80,4 +80,22 @@
   position: absolute;
   top: 20px;
   right: 0;
+}
+
+@media (max-width: 618px) {
+  .price {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .cart_item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .counter_wrapper {
+    align-items: center;
+    text-align: center;
+  }
 }

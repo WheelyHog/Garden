@@ -51,9 +51,13 @@ label {
   margin-right: 80px;
 }
 
-/* .filter_sort {
-  margin-left: 80px;
-} */
+@media (max-width: 400px) {
+  select {
+    margin-left: 20px;
+    width: 180px;
+    background-position: 165px center;
+  }
+}
 
 /* =============== customize checkbox ================= */
 
