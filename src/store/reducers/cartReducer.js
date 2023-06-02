@@ -4,6 +4,7 @@ const ADD_TO_CART = 'ADD_TO_CART';
 const INCREMENT_COUNT = 'INCREMENT_COUNT'
 const DECREMENT_COUNT = 'DECREMENT_COUNT'
 const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
+const CLEAR_CART = 'CLEAR_CART'
 
 const checkProduct = (state, payload) => {
   const productExist = state.find(el => el.id === payload.id);
@@ -32,6 +33,8 @@ export const cartReducer = (state = defaultState, action) => {
       return [...state]
     case REMOVE_FROM_CART:
       return state.filter(elem => elem.id !== action.payload)
+    case CLEAR_CART:
+      return []
     default:
       return state
   }
@@ -42,3 +45,4 @@ export const addToCartAction = (payload) => ({ type: ADD_TO_CART, payload })
 export const incrementCountAction = (payload) => ({ type: INCREMENT_COUNT, payload })
 export const decrementCountAction = (payload) => ({ type: DECREMENT_COUNT, payload })
 export const removeFromCartAction = (payload) => ({ type: REMOVE_FROM_CART, payload })
+export const clearCartAction = () => ({ type: CLEAR_CART })

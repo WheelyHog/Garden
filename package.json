@@ -1,6 +1,5 @@
 {
   "name": "garden",
-  "homepage": "https://wheelyhog.github.io/Garden/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
