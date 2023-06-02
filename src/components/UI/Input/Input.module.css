@@ -1,0 +1,41 @@
+.discount_input {
+  height: 75px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  font-size: var(--sub-header-text);
+  padding-left: 50px;
+}
+
+.phone_input {
+  height: 70px;
+  border: 1px solid var(--black-color);
+  padding-left: 25px;
+  border-radius: 20px;
+  outline: none;
+  font-size: var(--sub-header-text);
+  width: 100%;
+  background-color: var(--white-color);
+}
+
+@media (max-width: 990px) {
+  .discount_input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 562px) {
+  .phone_input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .discount_input {
+    height: 50px;
+  }
+
+  .phone_input {
+    height: 50px;
+  }
+}
