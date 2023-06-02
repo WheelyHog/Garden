@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
+import Button from '../../components/UI/Button/Button'
 import { addToCartAction } from '../../store/reducers/cartReducer'
 import s from './ProductInfoPage.module.css'
 
@@ -22,8 +23,6 @@ export default function ProductInfoPage() {
   const { title, image, discont_price, price, description } = productItem
   const discount_value = Math.floor(100 - discont_price * 100 / price);
 
-  const cart = useSelector(store => store.cart);
-
   return (
     <div className={s.product_info}>
       <h2 className={s.product_title}>{title}</h2>
@@ -37,7 +36,7 @@ export default function ProductInfoPage() {
             {discont_price && <p className={s.price}>{price}$</p>}
             {discont_price && <p className={s.discount_value}>{-discount_value}%</p>}
           </div>
-          <button className={s.add_btn} onClick={() => dispatch(addToCartAction(product[0]))}>To cart</button>
+          <Button text={'To cart'} properties={'add_to_cart_btn'} onClick={() => dispatch(addToCartAction(product[0]))} />
           <h4 className={s.product_subtitle}>Description</h4>
           <p className={s.product_text}>{description}</p>
         </div>

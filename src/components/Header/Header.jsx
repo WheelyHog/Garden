@@ -5,6 +5,7 @@ import logo_white from './assets/logo_white.png';
 import { SlHandbag } from 'react-icons/sl'
 import { NavLink } from 'react-router-dom'
 import CartCounter from '../CartCounter/CartCounter'
+import Button from '../UI/Button/Button';
 
 export default function Header() {
   const refApp = useRef(null);
@@ -32,7 +33,7 @@ export default function Header() {
     <div className={s.header} ref={refApp}>
       <div className={s.logo_wrapper}>
         <NavLink to='/'><img src={menuActive ? logo_white : logo} alt="logo" /></NavLink>
-        <NavLink to='/catalog'><button className={s.header_btn}>Catalog</button></NavLink>
+        <NavLink to='/catalog'><Button text={'Catalog'} properties={'header_btn'} /></NavLink>
       </div>
       <div className={s.nav_menu}>
         {menu_list.map(elem => <NavLink to={elem.link} key={elem.id}>{elem.title}</NavLink>)}

@@ -56,25 +56,6 @@
   font-weight: 600;
 }
 
-.add_btn {
-  width: 340px;
-  height: 86px;
-  background-color: var(--primary-color);
-  border-radius: 10px;
-  color: var(--white-color);
-  border: 2px solid var(--primary-color);
-  color: var(--white-color);
-  font-weight: var(--bold-text);
-  font-size: 28px;
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.add_btn:hover {
-  background-color: var(--white-color);
-  color: var(--primary-color);
-}
-
 .product_subtitle {
   padding-top: 40px;
   border-top: 1px dashed #8b8b8b;

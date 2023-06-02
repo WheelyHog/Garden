@@ -37,51 +37,10 @@ form {
   gap: 20px;
 }
 
-.phone_input {
-  height: 70px;
-  border: 1px solid var(--black-color);
-  padding-left: 25px;
-  border-radius: 20px;
-  outline: none;
-  font-size: var(--sub-header-text);
-  width: 100%;
-  background-color: var(--white-color);
-}
-
-.order_btn {
-  background-color: var(--primary-color);
-  height: 70px;
-  border-radius: 20px;
-  border: 2px solid var(--primary-color);
-  color: var(--white-color);
-  font-weight: var(--bold-text);
-  font-size: 28px;
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.order_btn:hover {
-  background-color: var(--white-color);
-  color: var(--primary-color);
-}
-
 @media (max-width: 562px) {
 
   .order,
   .order form {
     width: 100%;
-  }
-
-  .phone_input,
-  .order_btn {
-    width: 100%;
-  }
-}
-
-@media (max-width: 400px) {
-
-  .phone_input,
-  .order_btn {
-    height: 50px;
   }
 }

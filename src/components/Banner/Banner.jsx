@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import garden from './assets/garden.png'
 import { HashLink } from 'react-router-hash-link';
+import Button from '../UI/Button/Button';
 
 export default function Banner() {
 
@@ -23,7 +24,7 @@ export default function Banner() {
             <div className={s.content}>
               <h1 className={s.title}>Sale </h1>
               <h2 className={s.sub_title}>New season</h2>
-              <HashLink smooth to='#sales'><button className={s.sale_btn}>Sale</button></HashLink>
+              <HashLink smooth to='#sales'><Button text={'Sale'} properties={'sale_btn'} /></HashLink>
             </div>
             <div className={s.image_box}>
               <img className={s.image} src={garden} alt='garden' />
@@ -38,7 +39,7 @@ export default function Banner() {
               <HashLink smooth to='#sales'><button className={s.sale_btn}>Sale</button></HashLink>
             </div>
             <div className={s.image_box}>
-              <img className={s.image} src={garden} />
+              <img className={s.image} src={garden} alt={'garden'} />
             </div>
           </div>
         </div>
@@ -50,7 +51,7 @@ export default function Banner() {
               <HashLink smooth to='#sales'><button className={s.sale_btn}>Sale</button></HashLink>
             </div>
             <div className={s.image_box}>
-              <img className={s.image} src={garden} />
+              <img className={s.image} src={garden} alt='garden' />
             </div>
           </div>
         </div>

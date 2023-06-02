@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { filterCategoryProductsByRangeAction, filterCategoryProductsBySaleAction, sortCategoryProductsByDefaultAction, sortCategoryProductsByNameAction, sortCategoryProductsByPriceAscAction, sortCategoryProductsByPriceDescAction } from '../../store/reducers/categoryProductsReducer';
 import { filterByRangeAction, filterBySaleAction, sortByDefaultAction, sortByNameAction, sortByPriceAscAction, sortByPriceDescAction } from '../../store/reducers/productsReducer';
+import Input from '../UI/Input/Input';
 import s from './Filter.module.css'
 
 export default function Filter({ show_discont_sort, location }) {
@@ -58,12 +59,26 @@ export default function Filter({ show_discont_sort, location }) {
     <div className={s.filter_container}>
       <div className={s.filter_price}>
         <label className={s.filter_price_title}>Price</label>
-        <input type="number" placeholder="from" name="from" min='0' onChange={handleChange} value={fromValue} />
-        <input type="number" placeholder="to" name="to" mon='0' onChange={handleChange} value={toValue} />
+        <Input type={'number'}
+          placeholder={'from'}
+          name={'from'}
+          min={'0'}
+          value={fromValue} onChange={handleChange} />
+        <Input type={'number'}
+          placeholder={'to'}
+          name={'to'}
+          min={'0'}
+          value={toValue}
+          onChange={handleChange}
+        />
       </div>
       {show_discont_sort && <div className={s.filter_discount}>
         <label className={s.filter_discount_title}>Discounted items
-          <input type='checkbox' name='check_discount' onClick={handlerDiscount} />
+          <Input
+            type={'checkbox'}
+            name={'check_discount'}
+            onClick={handlerDiscount}
+          />
           <span className={s.checkmark}></span>
         </label>
       </div>}

@@ -2,6 +2,8 @@ import React from 'react';
 import s from './DiscountForm.module.css'
 import dwarf from './assets/gnom.png'
 import { send_coupon_request } from '../../asyncActions/requests';
+import Button from '../UI/Button/Button';
+import Input from '../UI/Input/Input';
 
 const submit = (e) => {
   e.preventDefault()
@@ -19,8 +21,15 @@ export default function DiscountForm() {
         <p className={s.discount_title}>5% off </p>
         <p className={s.discount_subtitle}>on the first order</p>
         <form onSubmit={submit}>
-          <input type='tel' placeholder="+49" className={s.discount_input} name='phone' required />
-          <button className={s.discount_btn}>Get a discount</button>
+          <Input type={'tel'}
+            placeholder={'+49'}
+            name={'phone'}
+            pattern={'[+]{1}[0-9]{11}'}
+            properties={'discount_input'}
+            required
+          />
+          {/* <input type='tel' placeholder="+49" className={s.discount_input} name='phone' required pattern="[+]{1}[0-9]{11}" /> */}
+          <Button text={'Get a discount'} properties={'discount_btn'} />
         </form>
       </div>
     </div>

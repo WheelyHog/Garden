@@ -36,34 +36,6 @@
   gap: 30px;
 }
 
-.discount_input,
-.discount_btn {
-  height: 75px;
-  border-radius: 25px;
-  outline: none;
-  border: none;
-}
-
-.discount_input {
-  font-size: var(--sub-header-text);
-  padding-left: 50px;
-}
-
-.discount_btn {
-  font-size: 28px;
-  font-weight: var(--bold-text);
-  color: var(--white-color);
-  background-color: transparent;
-  border: 2px solid var(--white-color);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.discount_btn:hover {
-  background-color: var(--white-color);
-  color: var(--primary-color);
-}
-
 @media (max-width: 990px) {
   .discount_title {
     font-size: var(--grand-text);
@@ -81,8 +53,7 @@
     width: 90%;
   }
 
-  .discount_input,
-  .discount_btn {
+  .discount_input {
     width: 100%;
   }
 }
@@ -102,13 +73,5 @@
 @media (max-width:500px) {
   .discount_img {
     width: 100%;
-  }
-}
-
-@media (max-width: 400px) {
-
-  .discount_input,
-  .discount_btn {
-    height: 50px;
   }
 }
