@@ -44,9 +44,9 @@ export default function Header() {
       </div>
 
       <div className={menuActive ? s.burger_active : s.burger} onClick={() => setMenuActive(!menuActive)}>
-        <div className={s.burger_line}></div>
-        <div className={s.burger_line}></div>
-        <div className={s.burger_line}></div>
+        <span className={s.burger_line}></span>
+        <span className={s.burger_line}></span>
+        <span className={s.burger_line}></span>
       </div>
 
       <div className={menuActive ? s.mobile_menu_active : s.mobile_menu}>

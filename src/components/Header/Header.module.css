@@ -70,10 +70,12 @@
 .burger_active {
   position: relative;
   z-index: 3;
+  width: 30px;
   height: 30px;
 }
 
 .burger_line {
+  display: block;
   height: 4px;
   width: 30px;
   background-color: #21243D;
