@@ -28,7 +28,9 @@ export default function ProductInfoPage() {
     <div className={s.product_info}>
       <h2 className={s.product_title}>{title}</h2>
       <div className={s.product_details}>
-        <img className={s.product_img} src={`${base_url}${image}`} alt={title} />
+        <div className={s.img_wrapper}>
+          <img className={s.product_img} src={`${base_url}${image}`} alt={title} />
+        </div>
         <div className={s.product_description}>
           <div className={s.price_container}>
             <p className={s.discount_price}>{discont_price !== null ? discont_price : price}<span>$</span></p>
