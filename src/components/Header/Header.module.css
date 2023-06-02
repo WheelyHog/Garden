@@ -145,6 +145,7 @@
 @media (max-width: 780px) {
   .burger {
     display: flex;
+    flex-shrink: inherit;
   }
 
   .nav_menu {

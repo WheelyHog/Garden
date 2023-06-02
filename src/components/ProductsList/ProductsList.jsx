@@ -5,7 +5,6 @@ import Filter from '../../components/Filter/Filter'
 
 export default function ProductsList({ products, title, show_filter, show_discont_sort, location }) {
   products = products.filter((product) => product.showBySale && product.showByRange)
-  console.log(products);
 
   return (
     <div className={s.products_list_wrapper}>

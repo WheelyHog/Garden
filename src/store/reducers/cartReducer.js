@@ -21,7 +21,7 @@ export const cartReducer = (state = defaultState, action) => {
     case ADD_TO_CART:
       return checkProduct(state, action.payload)
     case INCREMENT_COUNT:
-      state.find(elem => elem => elem.id === action.payload).count++;
+      state.find(elem => elem.id === action.payload).count++;
       return [...state]
     case DECREMENT_COUNT:
       const target = state.find(elem => elem.id === action.payload)
