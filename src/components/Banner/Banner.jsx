@@ -16,45 +16,27 @@ export default function Banner() {
     arrows: false
   };
 
+  const slides = ['slide1', 'slide2', 'slide3']
+
   return (
     <div className={s.banner_wrapper}>
       <Slider {...settings}>
-        <div className={s.slide1}>
-          <div className={s.banner_sale}>
-            <div className={s.content}>
-              <h1 className={s.title}>Sale </h1>
-              <h2 className={s.sub_title}>New season</h2>
-              <HashLink smooth to='#sales'><Button text={'Sale'} properties={'sale_btn'} /></HashLink>
+        {slides.map(elem => {
+          return (
+            <div className={`${s.slide} ${s[elem]}`} key={elem}>
+              <div className={s.banner_sale}>
+                <div className={s.content}>
+                  <h1 className={s.title}>Sale </h1>
+                  <h2 className={s.sub_title}>New season</h2>
+                  <HashLink smooth to='#sales'><Button text={'Sale'} properties={'sale_btn'} /></HashLink>
+                </div>
+                <div className={s.image_box}>
+                  <img className={s.image} src={garden} alt='garden' />
+                </div>
+              </div>
             </div>
-            <div className={s.image_box}>
-              <img className={s.image} src={garden} alt='garden' />
-            </div>
-          </div>
-        </div>
-        <div className={s.slide2}>
-          <div className={s.banner_sale}>
-            <div className={s.content}>
-              <h1 className={s.title}>Sale </h1>
-              <h2 className={s.sub_title}>New season</h2>
-              <HashLink smooth to='#sales'><button className={s.sale_btn}>Sale</button></HashLink>
-            </div>
-            <div className={s.image_box}>
-              <img className={s.image} src={garden} alt={'garden'} />
-            </div>
-          </div>
-        </div>
-        <div className={s.slide3}>
-          <div className={s.banner_sale}>
-            <div className={s.content}>
-              <h1 className={s.title}>Sale </h1>
-              <h2 className={s.sub_title}>New season</h2>
-              <HashLink smooth to='#sales'><button className={s.sale_btn}>Sale</button></HashLink>
-            </div>
-            <div className={s.image_box}>
-              <img className={s.image} src={garden} alt='garden' />
-            </div>
-          </div>
-        </div>
+          )
+        })}
       </Slider>
     </div>
 
