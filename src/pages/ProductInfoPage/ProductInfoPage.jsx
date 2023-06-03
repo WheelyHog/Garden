@@ -17,7 +17,7 @@ export default function ProductInfoPage() {
     fetch(`${product_url}${id}`)
       .then(res => res.json())
       .then(data => setProduct(data))
-  }, [])
+  }, [id])
 
   const productItem = product ? Object.assign({}, ...product) : {}
   const { title, image, discont_price, price, description } = productItem

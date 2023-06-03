@@ -1,4 +1,5 @@
-const defaultState = [];
+const storage = JSON.parse(localStorage.getItem('cart'));
+const defaultState = storage ? storage : [];
 
 const ADD_TO_CART = 'ADD_TO_CART';
 const INCREMENT_COUNT = 'INCREMENT_COUNT'
@@ -19,9 +20,11 @@ const checkProduct = (state, payload) => {
 export const cartReducer = (state = defaultState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
+      localStorage.setItem('cart', JSON.stringify(checkProduct(state, action.payload)))
       return checkProduct(state, action.payload)
     case INCREMENT_COUNT:
       state.find(elem => elem.id === action.payload).count++;
+      localStorage.setItem('cart', JSON.stringify([...state]))
       return [...state]
     case DECREMENT_COUNT:
       const target = state.find(elem => elem.id === action.payload)
@@ -30,10 +33,13 @@ export const cartReducer = (state = defaultState, action) => {
       } else {
         state = state.filter(elem => elem.id !== action.payload)
       }
+      localStorage.setItem('cart', JSON.stringify([...state]))
       return [...state]
     case REMOVE_FROM_CART:
+      localStorage.setItem('cart', JSON.stringify(state.filter(elem => elem.id !== action.payload)))
       return state.filter(elem => elem.id !== action.payload)
     case CLEAR_CART:
+      localStorage.setItem('cart', JSON.stringify([]))
       return []
     default:
       return state
