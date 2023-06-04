@@ -18,6 +18,7 @@ select {
   padding-left: 10px;
   color: #797979;
   margin-left: 50px;
+  background-color: var(--white-color);
 }
 
 label {
