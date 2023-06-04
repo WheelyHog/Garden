@@ -28,7 +28,6 @@ export default function DiscountForm() {
             properties={'discount_input'}
             required
           />
-          {/* <input type='tel' placeholder="+49" className={s.discount_input} name='phone' required pattern="[+]{1}[0-9]{11}" /> */}
           <Button text={'Get a discount'} properties={'discount_btn'} />
         </form>
       </div>

@@ -36,7 +36,7 @@
 }
 
 .sub_title {
-  margin-top: 5px;
+  margin-top: var(--spacing-ultrasmall);
   font-size: 65px;
   font-weight: 700;
 }
@@ -52,7 +52,7 @@
 
 @media (max-width:1080px) {
   .banner_sale {
-    gap: 20px;
+    gap: var(--spacing-medium);
   }
 
   .title {

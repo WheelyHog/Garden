@@ -23,9 +23,6 @@ export default function Map() {
           zoom={17}
         >
           <Marker position={{ lat: 52.507791, lng: 13.375124 }} title='Tel-Ran.de' label='Tel-Ran.de' icon={logo} />
-          {/* <InfoWindow>
-            <h4>Tel-Ran.de</h4>
-          </InfoWindow> */}
         </GoogleMap>
       )}
     </div>

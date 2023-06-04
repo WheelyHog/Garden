@@ -1,7 +1,7 @@
 .cart_item {
   display: flex;
-  gap: 30px;
-  padding: 40px 0;
+  gap: var(--spacing-large);
+  padding: var(--spacing-ultralarge) 0;
   border-bottom: 1px solid #a7a7a7;
   position: relative;
 }
@@ -21,7 +21,7 @@
 }
 
 .cart_item_title {
-  font-weight: 600;
+  font-weight: var(--medium-text);
   font-size: var(--sub-header-text);
   color: var(--dark-gray);
   max-width: 320px;
@@ -29,7 +29,7 @@
 
 .counter_box {
   display: flex;
-  gap: 30px;
+  gap: var(--spacing-large);
   border: 1px solid var(--dark-gray);
   border-radius: 10px;
   padding: 5px 15px;
@@ -51,7 +51,7 @@
 
 .cart_item_counter {
   font-size: var(--sub-header-text);
-  font-weight: 600;
+  font-weight: var(--medium-text);
   width: 30px;
   text-align: center;
 }
@@ -63,22 +63,22 @@
 }
 
 .discount_price {
-  font-weight: 600;
+  font-weight: var(--medium-text);
   width: 90px;
 }
 
 .price {
   font-weight: var(--normal-text);
-  color: #8b8b8b;
+  color: var(--gray-color);
   text-decoration: line-through;
   padding-right: 70px;
 }
 
 .close_btn {
-  font-size: 20px;
+  font-size: var(--info-text);
   cursor: pointer;
   position: absolute;
-  top: 20px;
+  top: var(--spacing-medium);
   right: 0;
 }
 

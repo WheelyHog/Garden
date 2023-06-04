@@ -5,7 +5,7 @@
 .product_title {
   color: var(--dark-grey);
   font-size: 36px;
-  font-weight: 600;
+  font-weight: var(--medium-text);
   margin-bottom: var(--spacing-large);
 }
 
@@ -36,15 +36,15 @@
 
 .discount_price {
   font-size: var(--grand-text);
-  font-weight: 600;
+  font-weight: var(--medium-text);
 }
 
 .discount_price span {
-  font-weight: 600;
+  font-weight: var(--medium-text);
 }
 
 .price {
-  color: #8b8b8b;
+  color: var(--gray-color);
   text-decoration: line-through;
   font-size: var(--info-text);
   font-weight: var(--normal-text);
@@ -53,13 +53,13 @@
 .discount_value {
   font-size: 28px;
   color: var(--pink-color);
-  font-weight: 600;
+  font-weight: var(--medium-text);
 }
 
 .product_subtitle {
-  padding-top: 40px;
-  border-top: 1px dashed #8b8b8b;
-  font-weight: 600;
+  padding-top: var(--spacing-ultralarge);
+  border-top: 1px dashed var(--gray-color);
+  font-weight: var(--medium-text);
   font-size: var(--info-text);
 }
 
@@ -70,7 +70,7 @@
 
 @media (max-width:1280px) {
   .product_details {
-    gap: 20px;
+    gap: var(--spacing-medium);
   }
 }
 

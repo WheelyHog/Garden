@@ -8,16 +8,20 @@
   --black-color: #000000;
   --pink-color: #ff32a1;
   --light-gray: #a9a9a9;
+  --gray-color: #8b8b8b;
   --dark-gray: #3a3a3a;
+  --brown-color: brown;
 
   --grand-text: 70px;
   --header-text: 40px;
+  --header-text-medium: 30px;
   --header-text-small: 24px;
   --sub-header-text: 18px;
   --info-text: 20px;
   --paragraph-text: 16px;
 
   --bold-text: 700;
+  --medium-text: 600;
   --normal-text: 500;
 
   --margin-main: 80px;
@@ -27,7 +31,8 @@
   --spacing-medium: 20px;
   --spacing-large: 30px;
   --spacing-ultralarge: 40px;
-  --transition: all 0.5s ease;
+
+  --transition: all 0.3s ease;
 }
 
 * {

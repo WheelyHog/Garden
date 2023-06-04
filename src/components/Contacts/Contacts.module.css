@@ -7,7 +7,7 @@
 .title {
   font-size: var(--header-text);
   margin-bottom: 25px;
-  font-weight: 700;
+  font-weight: var(--bold-text);
 }
 
 .phone_number {
@@ -32,7 +32,7 @@
 }
 
 .social_img {
-  font-size: 44px;
+  font-size: var(--header-text);
   cursor: pointer;
   transition: var(--transition);
 }
@@ -43,12 +43,12 @@
 
 .address p {
   font-size: var(--sub-header-text);
-  font-weight: 500;
+  font-weight: var(--normal-text);
   margin-bottom: 2px;
 }
 
 .address b {
-  font-size: 24px;
+  font-size: var(--header-text-small);
   font-weight: var(--bold-text);
 }
 
@@ -64,7 +64,7 @@
 
 @media (max-width: 990px) {
   .wrapper {
-    gap: 30px;
+    gap: var(--spacing-large);
   }
 }
 

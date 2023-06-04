@@ -5,7 +5,7 @@
 .products_list_title {
   font-weight: var(--bold-text);
   font-size: var(--header-text);
-  margin-bottom: 80px;
+  margin-bottom: var(--margin-main);
 }
 
 .products_list {

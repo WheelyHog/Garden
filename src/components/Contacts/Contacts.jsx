@@ -13,15 +13,12 @@ export default function Contacts() {
           <div className={s.social}>
             <div>
               <SlSocialInstagram className={s.social_img} />
-
               <p>instagram</p>
             </div>
             <div>
               <BsWhatsapp className={s.social_img} />
-
               <p>WhatsApp</p>
             </div>
-
           </div>
         </div>
         <div className={s.address}>

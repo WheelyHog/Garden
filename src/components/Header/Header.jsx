@@ -44,14 +44,7 @@ export default function Header() {
           <CartCounter className={s.cart_counter} />
         </NavLink>
       </div>
-
       <Burger menuActive={menuActive} setMenuActive={setMenuActive} />
-      {/* <div className={menuActive ? s.burger_active : s.burger} onClick={() => setMenuActive(!menuActive)}>
-        <span className={s.burger_line}></span>
-        <span className={s.burger_line}></span>
-        <span className={s.burger_line}></span>
-      </div> */}
-
       <div className={menuActive ? s.mobile_menu_active : s.mobile_menu}>
         <ul className={s.mobile_menu_list}>
           {menu_list.map(elem => <NavLink to={elem.link} key={elem.id}><li onClick={() => setMenuActive(!menuActive)}>{elem.title}</li></NavLink>)}

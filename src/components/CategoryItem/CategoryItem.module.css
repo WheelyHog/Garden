@@ -20,6 +20,6 @@
 
 .category_title {
   text-align: center;
-  font-weight: 600;
+  font-weight: var(--medium-text);
   font-size: var(--sub-header-text);
 }

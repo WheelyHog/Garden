@@ -4,9 +4,9 @@
 
 .back_link_wrapper {
   margin-right: 560px;
-  margin-bottom: 34px;
+  margin-bottom: var(--spacing-large);
   display: flex;
-  gap: 17px;
+  gap: var(--spacing-medium);
   justify-content: flex-end;
 }
 
@@ -28,12 +28,12 @@
 .title {
   font-weight: var(--bold-text);
   font-size: var(--header-text);
-  margin-bottom: 70px;
+  margin-bottom: var(--margin-main);
 }
 
 .warning {
   font-size: var(--header-text-small);
-  color: brown;
+  color: var(--brown-color);
   font-weight: var(--bold-text);
 }
 

@@ -11,7 +11,7 @@
 
 .order_title {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: var(--medium-text);
 }
 
 .order_sum {
@@ -26,7 +26,7 @@
 }
 
 .order_amount {
-  font-weight: 600;
+  font-weight: var(--medium-text);
   font-size: 32px;
 }
 
@@ -34,7 +34,7 @@ form {
   width: 450px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--spacing-medium);
 }
 
 @media (max-width: 562px) {
