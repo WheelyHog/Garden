@@ -40,7 +40,7 @@ export default function Header() {
         {menu_list.map(elem => <NavLink to={elem.link} key={elem.id}>{elem.title}</NavLink>)}
       </div>
       <div className={s.cart_wrapper}>
-        <NavLink to='/cart'><SlHandbag className={s.cart} />
+        <NavLink to='/cart'><SlHandbag className={s.cart} style={menuActive ? { color: 'white' } : { color: 'black' }} />
           <CartCounter className={s.cart_counter} />
         </NavLink>
       </div>

@@ -92,4 +92,8 @@
   .logo_wrapper {
     gap: 0;
   }
+
+  .cart {
+    z-index: 3;
+  }
 }
