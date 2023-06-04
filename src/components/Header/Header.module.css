@@ -42,7 +42,7 @@
 }
 
 /* =======================burger================== */
-.burger {
+/* .burger {
   width: 30px;
   height: 30px;
   display: none;
@@ -83,7 +83,7 @@
   transform: rotate(-45deg);
   translate: 0 5px;
   background-color: #fff;
-}
+} */
 
 /* ================= mobile menu ================ */
 .mobile_menu {

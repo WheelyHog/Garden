@@ -6,6 +6,7 @@ import { SlHandbag } from 'react-icons/sl'
 import { NavLink } from 'react-router-dom'
 import CartCounter from '../CartCounter/CartCounter'
 import Button from '../UI/Button/Button';
+import Burger from '../Burger/Burger';
 
 export default function Header() {
   const refApp = useRef(null);
@@ -44,11 +45,12 @@ export default function Header() {
         </NavLink>
       </div>
 
-      <div className={menuActive ? s.burger_active : s.burger} onClick={() => setMenuActive(!menuActive)}>
+      <Burger menuActive={menuActive} />
+      {/* <div className={menuActive ? s.burger_active : s.burger} onClick={() => setMenuActive(!menuActive)}>
         <span className={s.burger_line}></span>
         <span className={s.burger_line}></span>
         <span className={s.burger_line}></span>
-      </div>
+      </div> */}
 
       <div className={menuActive ? s.mobile_menu_active : s.mobile_menu}>
         <ul className={s.mobile_menu_list}>
