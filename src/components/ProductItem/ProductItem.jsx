@@ -21,7 +21,7 @@ export default function ProductItem({ product }) {
       <div className={s.product_item}>
         <div className={s.product_image_wrapper}>
           <img className={s.product_image} src={`${baseUrl}${image}`} alt={title} />
-          {/* <Button text={'Add To Cart'} style={'add_btn'} onClick={addToCartHandler} /> */}
+          {/* <Button text={'Add To Cart'} properties={'add_btn'} onClick={addToCartHandler} /> */}
           <button className={s.add_btn} onClick={addToCartHandler}>Add To Cart</button>
         </div>
         <div className={s.product_price_container}>

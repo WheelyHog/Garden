@@ -36,6 +36,7 @@
 @media (max-width: 690px) {
   .products_list {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 }
 
