@@ -40,7 +40,13 @@ export default function Header() {
         {menu_list.map(elem => <NavLink to={elem.link} key={elem.id}>{elem.title}</NavLink>)}
       </div>
       <div className={s.cart_wrapper}>
-        <NavLink to='/cart'><SlHandbag className={s.cart} style={menuActive ? { color: 'white' } : { color: 'black' }} />
+        <NavLink to='/cart'>
+          <SlHandbag className={s.cart}
+            style={menuActive ? { color: 'white' } : { color: 'black' }}
+            onClick={() => {
+              menuActive && setMenuActive(!menuActive)
+            }}
+          />
           <CartCounter className={s.cart_counter} />
         </NavLink>
       </div>
@@ -50,6 +56,6 @@ export default function Header() {
           {menu_list.map(elem => <NavLink to={elem.link} key={elem.id}><li onClick={() => setMenuActive(!menuActive)}>{elem.title}</li></NavLink>)}
         </ul>
       </div>
-    </div>
+    </div >
   )
 }
