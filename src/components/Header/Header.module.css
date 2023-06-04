@@ -129,10 +129,10 @@
 
 /* =================================================== */
 @media (max-width: 780px) {
-  .burger {
+  /* .burger {
     display: flex;
     flex-shrink: inherit;
-  }
+  } */
 
   .nav_menu {
     display: none;

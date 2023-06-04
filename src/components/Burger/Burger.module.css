@@ -1,21 +1,24 @@
 .burger {
   width: 30px;
-  height: 30px;
+  height: 24px;
   display: none;
-  flex-direction: column;
-  gap: 7px;
   cursor: pointer;
+  position: relative;
+  border-top: 4px solid #21243D;
+  border-bottom: 4px solid #21243D;
 }
 
 .burger_active {
   position: relative;
   z-index: 3;
   width: 30px;
-  height: 30px;
+  height: 24px;
 }
 
 .burger_line {
   display: block;
+  position: absolute;
+  top: 6px;
   height: 4px;
   width: 30px;
   background-color: #21243D;
@@ -27,6 +30,7 @@
   transform: rotate(45deg);
   /* translate: 0px 13px; */
   background-color: #fff;
+  top: 10px;
 }
 
 .burger_active .burger_line:nth-child(2) {
@@ -40,4 +44,13 @@
   transform: rotate(-45deg);
   /* translate: 0 5px; */
   background-color: #fff;
+  top: 10px;
+}
+
+
+@media (max-width: 780px) {
+  .burger {
+    display: flex;
+    /* flex-shrink: inherit; */
+  }
 }
