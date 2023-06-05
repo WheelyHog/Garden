@@ -1,18 +1,8 @@
-.products_list_wrapper {
-  margin-top: 50px;
-}
-
-.products_list_title {
-  font-weight: var(--bold-text);
-  font-size: var(--header-text);
-  margin-bottom: var(--margin-main);
-}
-
 .products_list {
-  margin: var(--spacing-ultralarge) 0 80px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-large);
+  justify-items: center;
 }
 
 .warning {

@@ -1,3 +1,9 @@
 .sales_container {
   margin: 0 var(--spacing-large);
 }
+
+.sales_title {
+  margin: 50px 0 20px;
+  font-weight: var(--bold-text);
+  font-size: var(--header-text);
+}

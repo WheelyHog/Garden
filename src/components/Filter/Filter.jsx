@@ -1,33 +1,35 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { filterCategoryProductsByRangeAction, filterCategoryProductsBySaleAction, sortCategoryProductsByDefaultAction, sortCategoryProductsByNameAction, sortCategoryProductsByPriceAscAction, sortCategoryProductsByPriceDescAction } from '../../store/reducers/categoryProductsReducer';
 import { filterByRangeAction, filterBySaleAction, sortByDefaultAction, sortByNameAction, sortByPriceAscAction, sortByPriceDescAction } from '../../store/reducers/productsReducer';
 import Input from '../UI/Input/Input';
 import s from './Filter.module.css'
 
-export default function Filter({ show_discont_sort, location }) {
+export default function Filter({ type }) {
+
   const dispatch = useDispatch()
   const handlerDiscount = (e) => {
-    dispatch(location === 'category_products' ? filterCategoryProductsBySaleAction(e.target.checked) : filterBySaleAction(e.target.checked))
+    dispatch(filterBySaleAction(e.target.checked))
   }
 
   const handleSortOption = (e) => {
     e.preventDefault();
+    console.log(e.target.value)
     switch (e.target.value) {
+
       case 'default':
-        dispatch(location === 'category_products' ? sortCategoryProductsByDefaultAction() : sortByDefaultAction())
+        dispatch(sortByDefaultAction())
         break;
 
       case 'priceDesc':
-        dispatch(location === 'category_products' ? sortCategoryProductsByPriceDescAction() : sortByPriceDescAction())
+        dispatch(sortByPriceDescAction())
         break
 
       case 'priceAsc':
-        dispatch(location === 'category_products' ? sortCategoryProductsByPriceAscAction() : sortByPriceAscAction())
+        dispatch(sortByPriceAscAction())
         break
 
       case 'name':
-        dispatch(location === 'category_products' ? sortCategoryProductsByNameAction() : sortByNameAction())
+        dispatch(sortByNameAction())
         break
 
       default:
@@ -51,8 +53,7 @@ export default function Filter({ show_discont_sort, location }) {
       range.to = value
       setToValue(Number(value))
     }
-
-    dispatch(location === 'category_products' ? filterCategoryProductsByRangeAction(range) : filterByRangeAction(range))
+    dispatch(filterByRangeAction(range))
   }
 
   return (
@@ -72,7 +73,7 @@ export default function Filter({ show_discont_sort, location }) {
           onChange={handleChange}
         />
       </div>
-      {show_discont_sort && <div className={s.filter_discount}>
+      {type !== 'sale' && <div className={s.filter_discount}>
         <label className={s.filter_discount_title}>Discounted items
           <Input
             type={'checkbox'}

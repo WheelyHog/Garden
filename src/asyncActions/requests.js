@@ -1,21 +1,32 @@
 import { getCategoriesAction } from "../store/reducers/categoriesReducer";
-import { getProductsAction } from "../store/reducers/productsReducer";
-import { getCategoryProductsAction } from "../store/reducers/categoryProductsReducer";
+import { getProductListByCategoryAction, getProductListBySaleAction } from "../store/reducers/productsReducer";
 
-const base_url = "http://localhost:3333";
+export const base_url = "http://localhost:3333";
 
-const products_url = base_url + "/products/all";
+// const products_url = base_url + "/products/all";
 const categories_url = base_url + "/categories/all";
-const category_products_url = base_url + "/categories/"
+// const category_products_url = base_url + "/categories/"
 const send_coupon_url = base_url + '/sale/send'
 const send_order_url = base_url + '/order/send'
 
-
-export const fetchProductsList = () => {
+export function fetchProductListByCategory(id) {
   return function (dispatch) {
-    fetch(products_url)
+    fetch(`${base_url}/categories/${id}`)
       .then(res => res.json())
-      .then(data => dispatch(getProductsAction(data)))
+      .then(data => dispatch(getProductListByCategoryAction(data)))
+  }
+}
+
+export function fetchAllProductList(type) {
+  return function (dispatch) {
+    fetch(`${base_url}/products/all`)
+      .then(res => res.json())
+      .then(data => {
+        dispatch(getProductListByCategoryAction({ data, category: {} }))
+        if (type === 'sale') {
+          dispatch(getProductListBySaleAction())
+        }
+      })
   }
 }
 
@@ -24,14 +35,6 @@ export const fetchCategoriesList = () => {
     fetch(categories_url)
       .then(res => res.json())
       .then(data => dispatch(getCategoriesAction(data)))
-  }
-}
-
-export const fetchCategoryProducts = (id) => {
-  return function (dispatch) {
-    fetch(`${category_products_url}${id}`)
-      .then(res => res.json())
-      .then(data => dispatch(getCategoryProductsAction(data)))
   }
 }
 

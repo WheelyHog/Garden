@@ -1,0 +1,9 @@
+.page_wrapper {
+  margin: var(--margin-main) var(--spacing-large) var(--spacing-large);
+}
+
+.page_title {
+  font-weight: var(--bold-text);
+  font-size: var(--header-text);
+  margin-bottom: var(--margin-main);
+}
