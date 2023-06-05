@@ -79,11 +79,6 @@
     font-size: var(--header-text);
   }
 
-  .add_btn {
-    width: 200px;
-    height: 50px;
-  }
-
   .product_text {
     font-size: var(--normal-text);
   }
