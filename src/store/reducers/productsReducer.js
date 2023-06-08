@@ -60,10 +60,10 @@ export const productListReducer = (state = defaultState, action) => {
     case FILTER_BY_RANGE:
       console.log(action.payload);
       let { from, to } = action.payload;
-      if (isNaN(to)) {
+      if (to === '' || to === 0) {
         to = Infinity;
       }
-      if (isNaN(from)) {
+      if (from === '') {
         from = -Infinity;
       }
       return {

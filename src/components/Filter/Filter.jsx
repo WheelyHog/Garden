@@ -37,8 +37,8 @@ export default function Filter({ type }) {
     }
   }
 
-  const [fromValue, setFromValue] = useState('from');
-  const [toValue, setToValue] = useState('to');
+  const [fromValue, setFromValue] = useState('');
+  const [toValue, setToValue] = useState('');
 
   const handleChange = (e) => {
     const range = {
@@ -47,11 +47,11 @@ export default function Filter({ type }) {
     }
     const { value } = e.target;
     if (e.target.name === 'from') {
-      range.from = value
-      setFromValue(Number(value))
+      range.from = +value
+      setFromValue(value)
     } else {
-      range.to = value
-      setToValue(Number(value))
+      range.to = +value
+      setToValue(value)
     }
     dispatch(filterByRangeAction(range))
   }

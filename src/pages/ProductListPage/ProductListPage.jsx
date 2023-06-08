@@ -27,6 +27,8 @@ export const ProductListPage = ({ type }) => {
     }
   }, [id, type])
 
+
+
   return (
     <div className={s.page_wrapper}>
       <h2 className={s.page_title}>{titlePage.title}</h2>
