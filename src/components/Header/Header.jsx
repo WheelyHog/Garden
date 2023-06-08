@@ -30,6 +30,12 @@ export default function Header() {
     return () => refApp.current.removeEventListener('wheel', handleScroll);
   });
 
+  if (menuActive) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+
   return (
     <div className={s.header} ref={refApp}>
       <div className={s.logo_wrapper}>
