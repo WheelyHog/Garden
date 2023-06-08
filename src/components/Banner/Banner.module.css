@@ -1,5 +1,7 @@
 .banner_wrapper {
   margin-top: 70px;
+  position: relative;
+  z-index: 1;
 }
 
 .banner_sale {

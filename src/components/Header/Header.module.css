@@ -51,6 +51,10 @@
   background-color: var(--primary-color);
   transform: translateX(-100px);
   transition: width .5s;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mobile_menu_active {
