@@ -16,7 +16,6 @@ export const ProductListPage = ({ type }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log(type)
     if (type === 'category') {
       dispatch(fetchProductListByCategory(id))
     } else {

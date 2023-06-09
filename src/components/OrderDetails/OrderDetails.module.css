@@ -6,7 +6,6 @@
   max-width: 500px;
   border: 2px solid var(--black-color);
   border-radius: 21px;
-  align-self: center;
 }
 
 .order_title {
