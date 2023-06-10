@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { filterByRangeAction, filterBySaleAction, sortByDefaultAction, sortByNameAction, sortByPriceAscAction, sortByPriceDescAction } from '../../store/reducers/productsReducer';
+import { filterByRangeAction, filterBySaleAction, sortByDefaultAction, sortByNameAction, sortByNameAZAction, sortByNameZAAction, sortByPriceAscAction, sortByPriceDescAction } from '../../store/reducers/productsReducer';
 import Input from '../UI/Input/Input';
 import s from './Filter.module.css'
 
@@ -13,7 +13,7 @@ export default function Filter({ type }) {
 
   const handleSortOption = (e) => {
     e.preventDefault();
-    console.log(e.target.value)
+
     switch (e.target.value) {
 
       case 'default':
@@ -28,8 +28,12 @@ export default function Filter({ type }) {
         dispatch(sortByPriceAscAction())
         break
 
-      case 'name':
-        dispatch(sortByNameAction())
+      case 'name_az':
+        dispatch(sortByNameAZAction())
+        break
+
+      case 'name_za':
+        dispatch(sortByNameZAAction())
         break
 
       default:
@@ -89,7 +93,8 @@ export default function Filter({ type }) {
           <option value='default'>by default</option>
           <option value='priceDesc'>price descending</option>
           <option value='priceAsc'>price ascending</option>
-          <option value='name'>by name</option>
+          <option value='name_az'>by name A-Z</option>
+          <option value='name_za'>by name Z-A</option>
         </select>
       </div>
     </div>

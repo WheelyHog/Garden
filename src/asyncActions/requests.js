@@ -1,11 +1,11 @@
 import { getCategoriesAction } from "../store/reducers/categoriesReducer";
+import { getProductInfoAction } from "../store/reducers/productInfoReducer";
 import { getProductListByCategoryAction, getProductListBySaleAction } from "../store/reducers/productsReducer";
 
 export const base_url = "http://localhost:3333";
 
-// const products_url = base_url + "/products/all";
 const categories_url = base_url + "/categories/all";
-// const category_products_url = base_url + "/categories/"
+const product_url = base_url + '/products/'
 const send_coupon_url = base_url + '/sale/send'
 const send_order_url = base_url + '/order/send'
 
@@ -37,6 +37,16 @@ export const fetchCategoriesList = () => {
       .then(data => dispatch(getCategoriesAction(data)))
   }
 }
+
+export const fetchProductInfo = (id) => {
+  return function (dispatch) {
+    fetch(`${product_url}${id}`)
+      .then(res => res.json())
+      .then(data => dispatch(getProductInfoAction(data)))
+  }
+}
+
+
 
 export const send_coupon_request = (phone) => {
   fetch(send_coupon_url, {

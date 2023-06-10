@@ -9,7 +9,8 @@ const FILTER_BY_SALE = 'FILTER_BY_SALE';
 const SORT_BY_DEFAULT = 'SORT_BY_DEFAULT';
 const SORT_BY_PRICE_DESC = 'SORT_BY_PRICE_DESC';
 const SORT_BY_PRICE_ASC = 'SORT_BY_PRICE_ASC';
-const SORT_BY_NAME = 'SORT_BY_NAME';
+const SORT_BY_NAME_AZ = 'SORT_BY_NAME_AZ';
+const SORT_BY_NAME_ZA = 'SORT_BY_NAME_ZA';
 const FILTER_BY_RANGE = 'FILTER_BY_RANGE';
 
 export const productListReducer = (state = defaultState, action) => {
@@ -60,8 +61,11 @@ export const productListReducer = (state = defaultState, action) => {
     case SORT_BY_PRICE_ASC:
       return { ...state, productList: [...state.productList].sort((a, b) => (a.discont_price ? a.discont_price : a.price) - (b.discont_price ? b.discont_price : b.price)) }
 
-    case SORT_BY_NAME:
+    case SORT_BY_NAME_AZ:
       return { ...state, productList: [...state.productList].sort((a, b) => a.title.localeCompare(b.title)) }
+
+    case SORT_BY_NAME_ZA:
+      return { ...state, productList: [...state.productList].sort((a, b) => b.title.localeCompare(a.title)) }
 
     case FILTER_BY_RANGE:
       console.log(action.payload);
@@ -92,7 +96,8 @@ export const filterBySaleAction = (payload) => ({ type: FILTER_BY_SALE, payload 
 export const sortByDefaultAction = () => ({ type: SORT_BY_DEFAULT })
 export const sortByPriceDescAction = () => ({ type: SORT_BY_PRICE_DESC })
 export const sortByPriceAscAction = () => ({ type: SORT_BY_PRICE_ASC })
-export const sortByNameAction = () => ({ type: SORT_BY_NAME })
+export const sortByNameAZAction = () => ({ type: SORT_BY_NAME_AZ })
+export const sortByNameZAAction = () => ({ type: SORT_BY_NAME_ZA })
 export const filterByRangeAction = (payload) => ({ type: FILTER_BY_RANGE, payload })
 
 

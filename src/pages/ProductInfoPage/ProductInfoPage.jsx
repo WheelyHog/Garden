@@ -1,31 +1,27 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
+import { fetchProductInfo } from '../../asyncActions/requests'
 import Button from '../../components/UI/Button/Button'
 import { addToCartAction } from '../../store/reducers/cartReducer'
 import s from './ProductInfoPage.module.css'
+import { base_url } from '../../asyncActions/requests'
 
 export default function ProductInfoPage() {
   const { id } = useParams()
   const dispatch = useDispatch()
-  const [product, setProduct] = useState([])
-  const base_url = "http://localhost:3333";
+  const productItem = useSelector(store => store.productInfo)
   const navigate = useNavigate()
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    const product_url = base_url + '/products/';
-    fetch(`${product_url}${id}`)
-      .then(res => res.json())
-      .then(data => {
-        if (data.status) {
-          navigate('/*')
-        } else setProduct(data)
-      })
-  }, [id])
+    dispatch(fetchProductInfo(id))
+    window.scrollTo(0, 0)
+  }, [dispatch, id])
 
+  if (productItem.status) {
+    navigate('/*')
+  }
 
-  const productItem = product ? Object.assign({}, ...product) : {}
   const { title, image, discont_price, price, description } = productItem
   const discount_value = Math.floor(100 - discont_price * 100 / price);
 
@@ -42,7 +38,7 @@ export default function ProductInfoPage() {
             {discont_price && <p className={s.price}>{price}$</p>}
             {discont_price && <p className={s.discount_value}>{-discount_value}%</p>}
           </div>
-          <Button text={'To cart'} properties={'add_to_cart_btn'} onClick={() => dispatch(addToCartAction(product[0]))} />
+          <Button text={'To cart'} properties={'add_to_cart_btn'} onClick={() => dispatch(addToCartAction(productItem))} />
           <h4 className={s.product_subtitle}>Description</h4>
           <p className={s.product_text}>{description}</p>
         </div>
