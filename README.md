@@ -1,3 +1,3 @@
-## Tel-Ran Final Project
+#### Tel-Ran Final Project
 
 ### GARDEN
