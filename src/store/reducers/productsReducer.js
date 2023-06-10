@@ -15,7 +15,13 @@ const FILTER_BY_RANGE = 'FILTER_BY_RANGE';
 export const productListReducer = (state = defaultState, action) => {
   switch (action.type) {
     case GET_PRODUCT_LIST_BY_CATEGORY:
-      if (action.payload.category.title) {
+      if (action.payload.status) {
+        alert(action.payload.message);
+        return {
+          titlePage: { title: '' },
+          productList: []
+        }
+      } else if (action.payload.category.title) {
         return {
           titlePage: action.payload.category,
           productList: action.payload.data.map(elem => ({ ...elem, showBySale: true, showByRange: true }))

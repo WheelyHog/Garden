@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Button from '../../components/UI/Button/Button'
 import { addToCartAction } from '../../store/reducers/cartReducer'
 import s from './ProductInfoPage.module.css'
@@ -10,14 +10,20 @@ export default function ProductInfoPage() {
   const dispatch = useDispatch()
   const [product, setProduct] = useState([])
   const base_url = "http://localhost:3333";
+  const navigate = useNavigate()
 
   useEffect(() => {
     window.scrollTo(0, 0);
     const product_url = base_url + '/products/';
     fetch(`${product_url}${id}`)
       .then(res => res.json())
-      .then(data => setProduct(data))
+      .then(data => {
+        if (data.status) {
+          navigate('/*')
+        } else setProduct(data)
+      })
   }, [id])
+
 
   const productItem = product ? Object.assign({}, ...product) : {}
   const { title, image, discont_price, price, description } = productItem

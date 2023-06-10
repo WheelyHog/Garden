@@ -48,7 +48,7 @@ export const send_coupon_request = (phone) => {
   })
     .then(res => res.json())
     .then(data => console.log('Request sent', data))
-    .catch(error => console.error('Error: ', error))
+    .catch(error => alert('Error: ', error.message))
 }
 
 

@@ -11,7 +11,9 @@ export default function Pagination({ setCurrentPage, countElem, currentPage }) {
   return (
     <div className={s.pagination}>
       {numberPage.map(elem =>
-        <div className={elem === currentPage ? s.pagination_item_active : s.pagination_item}
+        <div
+          key={elem.id}
+          className={elem === currentPage ? s.pagination_item_active : s.pagination_item}
           onClick={() => setCurrentPage(elem)}
         >
           {elem}
