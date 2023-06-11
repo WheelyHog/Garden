@@ -6,6 +6,7 @@ import Button from '../../components/UI/Button/Button'
 import { addToCartAction } from '../../store/reducers/cartReducer'
 import s from './ProductInfoPage.module.css'
 import { base_url } from '../../asyncActions/requests'
+import { add_to_cart } from '../../store/reducers/cartSlice'
 
 export default function ProductInfoPage() {
   const { id } = useParams()
@@ -38,7 +39,7 @@ export default function ProductInfoPage() {
             {discont_price && <p className={s.price}>{price}$</p>}
             {discont_price && <p className={s.discount_value}>{-discount_value}%</p>}
           </div>
-          <Button text={'To cart'} properties={'add_to_cart_btn'} onClick={() => dispatch(addToCartAction(productItem))} />
+          <Button text={'To cart'} properties={'add_to_cart_btn'} onClick={() => dispatch(add_to_cart(productItem))} />
           <h4 className={s.product_subtitle}>Description</h4>
           <p className={s.product_text}>{description}</p>
         </div>

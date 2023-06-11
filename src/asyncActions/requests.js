@@ -1,5 +1,8 @@
+import { get_categories } from "../store/categoriesSlice";
+import { get_product_list_by_category, get_product_list_by_sale } from "../store/productListSlice";
 import { getCategoriesAction } from "../store/reducers/categoriesReducer";
 import { getProductInfoAction } from "../store/reducers/productInfoReducer";
+import { get_product_info } from "../store/reducers/productInfoSlice";
 import { getProductListByCategoryAction, getProductListBySaleAction } from "../store/reducers/productsReducer";
 
 export const base_url = "http://localhost:3333";
@@ -13,7 +16,7 @@ export function fetchProductListByCategory(id) {
   return function (dispatch) {
     fetch(`${base_url}/categories/${id}`)
       .then(res => res.json())
-      .then(data => dispatch(getProductListByCategoryAction(data)))
+      .then(data => dispatch(get_product_list_by_category(data)))
   }
 }
 
@@ -22,9 +25,9 @@ export function fetchAllProductList(type) {
     fetch(`${base_url}/products/all`)
       .then(res => res.json())
       .then(data => {
-        dispatch(getProductListByCategoryAction({ data, category: {} }))
+        dispatch(get_product_list_by_category({ data, category: {} }))
         if (type === 'sale') {
-          dispatch(getProductListBySaleAction())
+          dispatch(get_product_list_by_sale())
         }
       })
   }
@@ -34,7 +37,7 @@ export const fetchCategoriesList = () => {
   return function (dispatch) {
     fetch(categories_url)
       .then(res => res.json())
-      .then(data => dispatch(getCategoriesAction(data)))
+      .then(data => dispatch(get_categories(data)))
   }
 }
 
@@ -42,7 +45,7 @@ export const fetchProductInfo = (id) => {
   return function (dispatch) {
     fetch(`${product_url}${id}`)
       .then(res => res.json())
-      .then(data => dispatch(getProductInfoAction(data)))
+      .then(data => dispatch(get_product_info(data)))
   }
 }
 

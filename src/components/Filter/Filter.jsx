@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
+import { filter_by_range, filter_by_sale, sort_by_default, sort_by_name_az, sort_by_name_za, sort_by_price_asc, sort_by_price_desc } from '../../store/productListSlice';
 import { filterByRangeAction, filterBySaleAction, sortByDefaultAction, sortByNameAction, sortByNameAZAction, sortByNameZAAction, sortByPriceAscAction, sortByPriceDescAction } from '../../store/reducers/productsReducer';
 import Input from '../UI/Input/Input';
 import s from './Filter.module.css'
@@ -8,7 +9,7 @@ export default function Filter({ type }) {
 
   const dispatch = useDispatch()
   const handlerDiscount = (e) => {
-    dispatch(filterBySaleAction(e.target.checked))
+    dispatch(filter_by_sale(e.target.checked))
   }
 
   const handleSortOption = (e) => {
@@ -17,23 +18,23 @@ export default function Filter({ type }) {
     switch (e.target.value) {
 
       case 'default':
-        dispatch(sortByDefaultAction())
+        dispatch(sort_by_default())
         break;
 
       case 'priceDesc':
-        dispatch(sortByPriceDescAction())
+        dispatch(sort_by_price_desc())
         break
 
       case 'priceAsc':
-        dispatch(sortByPriceAscAction())
+        dispatch(sort_by_price_asc())
         break
 
       case 'name_az':
-        dispatch(sortByNameAZAction())
+        dispatch(sort_by_name_az())
         break
 
       case 'name_za':
-        dispatch(sortByNameZAAction())
+        dispatch(sort_by_name_za())
         break
 
       default:
@@ -57,7 +58,7 @@ export default function Filter({ type }) {
       range.to = +value
       setToValue(value)
     }
-    dispatch(filterByRangeAction(range))
+    dispatch(filter_by_range(range))
   }
 
   return (

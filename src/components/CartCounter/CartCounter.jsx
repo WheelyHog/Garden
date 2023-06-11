@@ -5,6 +5,7 @@ import s from './CartCounter.module.css'
 export default function CartCounter() {
 
   const cart = useSelector(store => store.cart)
+  console.log(cart)
   const counter = cart.reduce((accum, elem) => accum + elem.count, 0)
 
   return (
