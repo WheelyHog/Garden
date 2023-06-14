@@ -17,7 +17,7 @@ export default function ProductItem({ product }) {
   }
 
   return (
-    <NavLink to={`/products/${id}`}>
+    <NavLink to={`/products/${id}`} onClick={(e) => e.stopPropagation()}>
       <div className={s.product_item}>
         <div className={s.product_image_wrapper}>
           <img className={s.product_image} src={`${baseUrl}${image}`} alt={title} />

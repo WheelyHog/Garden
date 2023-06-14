@@ -7,7 +7,6 @@ export default function ProductsList({ products, showPagination }) {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [countProductsPage, setCountProductsPage] = useState(8)
-
   const lastElem = currentPage * countProductsPage;
   const firstElem = lastElem - countProductsPage;
   const productsPageList = products.slice(firstElem, lastElem)

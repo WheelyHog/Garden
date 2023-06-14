@@ -13,7 +13,6 @@ export default function AllCategoriesPage() {
   }, [])
 
   const categories = useSelector(store => store.categories)
-  console.log(categories)
 
   return (
     <div>

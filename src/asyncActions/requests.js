@@ -1,9 +1,7 @@
-import { get_categories } from "../store/categoriesSlice";
-import { get_product_list_by_category, get_product_list_by_sale } from "../store/productListSlice";
-import { getCategoriesAction } from "../store/reducers/categoriesReducer";
-import { getProductInfoAction } from "../store/reducers/productInfoReducer";
+import { get_categories } from "../store/reducers/categoriesSlice";
+import { get_product_list_by_category, get_product_list_by_sale } from "../store/reducers/productListSlice";
 import { get_product_info } from "../store/reducers/productInfoSlice";
-import { getProductListByCategoryAction, getProductListBySaleAction } from "../store/reducers/productsReducer";
+
 
 export const base_url = "http://localhost:3333";
 
@@ -61,7 +59,7 @@ export const send_coupon_request = (phone) => {
   })
     .then(res => res.json())
     .then(data => console.log('Request sent', data))
-    .catch(error => alert('Error: ', error.message))
+    .catch(error => console.error('Error: ', error.message))
 }
 
 

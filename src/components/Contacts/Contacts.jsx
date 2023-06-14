@@ -10,7 +10,7 @@ export default function Contacts() {
       <div className={s.wrapper}>
         <div className={s.contact}>
           <h3 className={s.title}>Contact</h3>
-          <h2 className={s.phone_number}>+49 999 999 99 99</h2>
+          <NavLink to={'tel:+499999999'} className={s.phone_number}>+49 999 999 99 99</NavLink>
           <div className={s.social}>
             <div>
               <NavLink to={'https://www.instagram.com/'}><SlSocialInstagram className={s.social_img} /></NavLink>

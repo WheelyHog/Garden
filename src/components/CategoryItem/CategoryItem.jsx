@@ -1,9 +1,8 @@
 import React from 'react'
 import s from './CategoryItem.module.css'
+import { base_url } from '../../asyncActions/requests'
 
-export default function CategoryItem({ id, title, image }) {
-
-  const base_url = 'http://localhost:3333';
+export default function CategoryItem({ title, image }) {
 
   return (
     <div className={s.category_item}>

@@ -18,7 +18,6 @@ export default function HomePage() {
   }, [])
 
   const categories = useSelector(store => store.categories)
-  // const productList = useSelector(store => store.productList.productList)
   const categories_to_show = categories.slice(0, 4)
 
   return (

@@ -3,10 +3,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 import { fetchProductInfo } from '../../asyncActions/requests'
 import Button from '../../components/UI/Button/Button'
-import { addToCartAction } from '../../store/reducers/cartReducer'
 import s from './ProductInfoPage.module.css'
 import { base_url } from '../../asyncActions/requests'
 import { add_to_cart } from '../../store/reducers/cartSlice'
+
+
 
 export default function ProductInfoPage() {
   const { id } = useParams()

@@ -1,12 +1,11 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { decrementCountAction, incrementCountAction, removeFromCartAction } from '../../store/reducers/cartReducer';
 import s from './CartItem.module.css'
 import { RxCross1 } from 'react-icons/rx'
 import { decrement_count, increment_count, remove_from_cart } from '../../store/reducers/cartSlice';
+import { base_url } from '../../asyncActions/requests';
 
 export default function CartItem({ id, title, image, count, discont_price, price }) {
-  const base_url = 'http://localhost:3333';
   const dispatch = useDispatch();
 
   return (

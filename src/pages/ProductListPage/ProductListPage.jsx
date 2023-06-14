@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { fetchAllProductList, fetchProductListByCategory } from "../../asyncActions/requests"
 import ProductsList from "../../components/ProductsList/ProductsList"
-import { getProductListBySaleAction } from "../../store/reducers/productsReducer"
 import s from './ProductListPage.module.css'
 import Filter from '../../components/Filter/Filter'
+import { get_product_list_by_sale } from "../../store/reducers/productListSlice"
 
 export const ProductListPage = ({ type }) => {
 
@@ -21,7 +21,7 @@ export const ProductListPage = ({ type }) => {
     } else {
       dispatch(fetchAllProductList(type))
       if (type === 'sale') {
-        dispatch(getProductListBySaleAction())
+        dispatch(get_product_list_by_sale())
       }
     }
   }, [id, type])

@@ -7,7 +7,6 @@ const checkProduct = (state, payload) => {
   const productExist = state.find(el => el.id === payload.id);
   if (productExist) {
     productExist.count++
-    // return [...state]
   } else {
     state.push({ ...payload, count: 1 })
   }
@@ -18,11 +17,8 @@ const cartSlice = createSlice({
   initialState: storage ? storage : [],
   reducers: {
     add_to_cart(state, action) {
-      console.log(action.payload)
       checkProduct(state, action.payload);
-      console.log(state)
       updateLocalStorage(state)
-      // return state;
     },
 
     increment_count(state, action) {
@@ -51,7 +47,6 @@ const cartSlice = createSlice({
       updateLocalStorage(state);
       return state
     }
-
   }
 })
 

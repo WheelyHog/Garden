@@ -9,6 +9,7 @@ import Button from '../UI/Button/Button';
 export default function Banner() {
 
   const settings = {
+
     infinite: true,
     speed: 500,
     slidesToShow: 1,

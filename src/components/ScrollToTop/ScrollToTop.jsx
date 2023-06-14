@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import s from './ScrollToTop.module.css'
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
-import { HashLink } from 'react-router-hash-link'
+
 
 export default function ScrollToTop() {
 

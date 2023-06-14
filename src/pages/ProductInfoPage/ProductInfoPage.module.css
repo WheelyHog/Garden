@@ -69,6 +69,10 @@
   font-size: var(--info-text);
 }
 
+.slider_wrapper {
+  margin-top: 50px;
+}
+
 @media (max-width:1280px) {
   .product_details {
     gap: var(--spacing-medium);
