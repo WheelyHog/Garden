@@ -9,12 +9,14 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import ProductInfoPage from './pages/ProductInfoPage/ProductInfoPage';
 import CartPage from './pages/CartPage/CartPage';
 import { ProductListPage } from './pages/ProductListPage/ProductListPage';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 
 function App() {
 
   return (
     <div className='container'>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />
