@@ -2,6 +2,7 @@ import React from 'react'
 import s from './Contacts.module.css'
 import { SlSocialInstagram } from 'react-icons/sl'
 import { BsWhatsapp } from 'react-icons/bs'
+import { NavLink } from 'react-router-dom'
 
 export default function Contacts() {
   return (
@@ -12,11 +13,11 @@ export default function Contacts() {
           <h2 className={s.phone_number}>+49 999 999 99 99</h2>
           <div className={s.social}>
             <div>
-              <SlSocialInstagram className={s.social_img} />
+              <NavLink to={'https://www.instagram.com/'}><SlSocialInstagram className={s.social_img} /></NavLink>
               <p>instagram</p>
             </div>
             <div>
-              <BsWhatsapp className={s.social_img} />
+              <NavLink to={'https://www.whatsapp.com/'}><BsWhatsapp className={s.social_img} /></NavLink>
               <p>WhatsApp</p>
             </div>
           </div>
