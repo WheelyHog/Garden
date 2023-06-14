@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { send_order } from '../../asyncActions/requests'
+import { send_order } from '../../asyncActions/order'
 import { clear_cart } from '../../store/reducers/cartSlice'
 import Button from '../UI/Button/Button'
 import Input from '../UI/Input/Input'

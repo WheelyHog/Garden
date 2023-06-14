@@ -4,9 +4,10 @@ import CategoriesList from '../../components/CategoriesList/CategoriesList'
 import s from './HomePage.module.css'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllProductList, fetchCategoriesList } from '../../asyncActions/requests';
 import DiscountForm from '../../components/DiscountForm/DiscountForm';
 import Sale from '../../components/Sale/Sale';
+import { fetchCategoriesList } from '../../asyncActions/categories';
+import { fetchAllProductList } from '../../asyncActions/products';
 
 export default function HomePage() {
   const dispatch = useDispatch()

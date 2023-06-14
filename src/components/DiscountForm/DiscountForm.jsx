@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './DiscountForm.module.css'
 import dwarf from './assets/gnom.png'
-import { send_coupon_request } from '../../asyncActions/requests';
 import Button from '../UI/Button/Button';
 import Input from '../UI/Input/Input';
+import { send_coupon_request } from '../../asyncActions/order';
 
 const submit = (e) => {
   e.preventDefault()

@@ -1,11 +1,11 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
-import { fetchAllProductList, fetchProductListByCategory } from "../../asyncActions/requests"
 import ProductsList from "../../components/ProductsList/ProductsList"
 import s from './ProductListPage.module.css'
 import Filter from '../../components/Filter/Filter'
 import { get_product_list_by_sale } from "../../store/reducers/productListSlice"
+import { fetchAllProductList, fetchProductListByCategory } from "../../asyncActions/products"
 
 export const ProductListPage = ({ type }) => {
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllProductList } from '../../asyncActions/requests';
+import { fetchAllProductList } from '../../asyncActions/products';
 import ProductsList from '../ProductsList/ProductsList';
 import s from './Sale.module.css'
 
