@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { addToCartAction } from '../../store/reducers/cartReducer';
 import { add_to_cart } from '../../store/reducers/cartSlice';
 import Button from '../UI/Button/Button';
 import s from './ProductItem.module.css'
