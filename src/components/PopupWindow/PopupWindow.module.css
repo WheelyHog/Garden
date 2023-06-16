@@ -68,7 +68,7 @@
 }
 
 .close_btn {
-  align-self: self-end;
+  align-self: flex-end;
   font-size: 30px;
   cursor: pointer;
 }
