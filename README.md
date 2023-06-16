@@ -25,3 +25,4 @@ During the work were used:
 - Google Maps
 - Fetch Requests
 - GH-Pages
+- Custom UI Components
