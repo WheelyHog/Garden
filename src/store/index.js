@@ -4,6 +4,7 @@ import productListSlice from './reducers/productListSlice';
 import cartSlice from './reducers/cartSlice';
 import productInfoSlice from './reducers/productInfoSlice';
 
+
 const rootReducer = combineReducers({
   categories: categoriesSlice,
   productList: productListSlice,

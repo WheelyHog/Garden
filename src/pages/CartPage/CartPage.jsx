@@ -9,7 +9,6 @@ import { NavLink } from 'react-router-dom'
 export default function CartPage() {
   useEffect(() => window.scrollTo(0, 0), [])
   const cart = useSelector(store => store.cart)
-  console.log(cart);
 
   return (
     <div className='container'>

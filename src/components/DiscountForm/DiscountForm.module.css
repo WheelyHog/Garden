@@ -36,6 +36,8 @@
   gap: var(--spacing-large);
 }
 
+
+
 @media (max-width: 990px) {
   .discount_title {
     font-size: var(--grand-text);

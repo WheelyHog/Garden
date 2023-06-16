@@ -1,12 +1,12 @@
 import React from 'react'
-import { useDispatch } from 'react-redux';
 import s from './CartItem.module.css'
 import { RxCross1 } from 'react-icons/rx'
 import { decrement_count, increment_count, remove_from_cart } from '../../store/reducers/cartSlice';
 import { base_url } from '../../asyncActions/base_url';
+import { useDispatch } from 'react-redux';
 
 export default function CartItem({ id, title, image, count, discont_price, price }) {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   return (
     <div className={s.cart_item}>

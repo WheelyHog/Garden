@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import s from './Header.module.css';
 import logo from './assets/logo.png';
 import logo_white from './assets/logo_white.png';
@@ -9,26 +9,13 @@ import Button from '../UI/Button/Button';
 import Burger from '../Burger/Burger';
 
 export default function Header() {
-  const refApp = useRef(null);
   const [menuActive, setMenuActive] = useState(false)
-
-  const handleScroll = (event) => {
-    if (menuActive) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-  };
 
   const menu_list = [
     { id: 1, title: "Main Page", link: "/" },
     { id: 2, title: "All products", link: "/products/all" },
     { id: 3, title: "All sales", link: "/sales/all" }
   ];
-
-  useEffect(() => {
-    refApp.current.addEventListener('wheel', handleScroll);
-    return () => refApp.current.removeEventListener('wheel', handleScroll);
-  });
 
   if (menuActive) {
     document.body.style.overflow = 'hidden';
@@ -37,7 +24,7 @@ export default function Header() {
   }
 
   return (
-    <div className={s.header} ref={refApp}>
+    <div className={s.header} >
       <div className={s.logo_wrapper}>
         <NavLink to='/'><img src={menuActive ? logo_white : logo} alt="logo" /></NavLink>
         <NavLink to='/catalog'><Button text={'Catalog'} properties={'header_btn'} /></NavLink>

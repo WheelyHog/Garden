@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './DiscountForm.module.css'
 import dwarf from './assets/gnom.png'
 import Button from '../UI/Button/Button';
 import Input from '../UI/Input/Input';
 import { send_coupon_request } from '../../asyncActions/order';
+import PopupWindow from '../PopupWindow/PopupWindow';
 
-const submit = (e) => {
-  e.preventDefault()
-  send_coupon_request(e.target.phone.value)
-  e.target.reset()
-}
+
 
 export default function DiscountForm() {
+
+  const submit = (e) => {
+    e.preventDefault()
+    send_coupon_request(e.target.phone.value)
+    setMessageActive(true)
+    document.body.style.overflow = 'hidden';
+    e.target.reset()
+  }
+
+  const [messageActive, setMessageActive] = useState(false)
+
   return (
     <div className={s.discount_wrapper}>
       <div className={s.discount_left}>
@@ -31,6 +39,12 @@ export default function DiscountForm() {
           <Button text={'Get a discount'} properties={'discount_btn'} />
         </form>
       </div>
+      <PopupWindow
+        messageActive={messageActive}
+        setMessageActive={setMessageActive}
+        h3_text={'Congratulations!'}
+        h4_text={'Now you have discount 5% on the first order!'}
+      />
     </div>
   )
 }
