@@ -37,7 +37,7 @@
   font-weight: var(--bold-text);
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1282px) {
   .cart_list_container {
     flex-direction: column;
   }

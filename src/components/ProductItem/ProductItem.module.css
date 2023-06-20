@@ -1,5 +1,5 @@
 .product_item {
-  padding: 5px;
+  padding: 20px;
 }
 
 .product_item:hover {
@@ -52,6 +52,7 @@
 .product_title {
   padding: 0 var(--spacing-large);
   max-width: 300px;
+  height: 70px;
 }
 
 .add_btn {
@@ -92,5 +93,11 @@ a {
   .product_price_container {
     max-width: 300px;
     margin: var(--spacing-large) 0;
+  }
+}
+
+@media (max-width: 404px) {
+  .product_item {
+    padding: 5px;
   }
 }

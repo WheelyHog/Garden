@@ -9,21 +9,27 @@
   font-size: 15px;
 }
 
-@media (max-width:1352px) {
+@media (max-width:1510px) {
+  .products_list {
+    gap: 0;
+  }
+}
+
+@media (max-width:1426px) {
   .products_list {
     grid-template-columns: repeat(3, 300px);
     justify-content: space-around;
   }
 }
 
-@media (max-width:1020px) {
+@media (max-width:1084px) {
   .products_list {
     grid-template-columns: repeat(2, 300px);
     justify-content: space-around;
   }
 }
 
-@media (max-width: 690px) {
+@media (max-width: 742px) {
   .products_list {
     grid-template-columns: 1fr;
     justify-items: center;
