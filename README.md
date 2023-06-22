@@ -33,5 +33,5 @@ During the work were used:
 This is the API that you need to download and run locally. This API will represent the back-end of the project.
 
 ##### API Launch Commands:
-npm i
-npm run dev
+- npm i
+- npm run dev
