@@ -1,6 +1,6 @@
 #### Tel-Ran Final Project 
 
-##### Release 2.0
+##### Release 3.0
 
 ### [GARDEN](https://wheelyhog.github.io/Garden/) 
 
@@ -26,3 +26,12 @@ During the work were used:
 - Fetch Requests
 - GH-Pages
 - Custom UI Components
+- Redux Toolkit
+
+### [Backend](https://github.com/HaykInanc/telran_project_backend)
+
+This is the API that you need to download and run locally. This API will represent the back-end of the project.
+
+##### API Launch Commands:
+npm i
+npm run dev
