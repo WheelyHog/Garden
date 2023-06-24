@@ -77,7 +77,7 @@
   border: 2px solid var(--white-color);
 }
 
-.product_image_wrapper:hover .add_btn {
+.product_image_wrapper:hover button {
   opacity: 1;
   cursor: pointer;
   bottom: var(--spacing-small);

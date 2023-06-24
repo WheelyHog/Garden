@@ -24,7 +24,7 @@ export default function Header() {
   }
 
   return (
-    <div className={s.header} >
+    <header className={s.header} >
       <div className={s.logo_wrapper}>
         <NavLink to='/'><img src={menuActive ? logo_white : logo} alt="logo" /></NavLink>
         <NavLink to='/catalog'><Button text={'Catalog'} properties={'header_btn'} /></NavLink>
@@ -49,6 +49,6 @@ export default function Header() {
           {menu_list.map(elem => <NavLink to={elem.link} key={elem.id}><li onClick={() => setMenuActive(!menuActive)}>{elem.title}</li></NavLink>)}
         </ul>
       </div>
-    </div >
+    </header >
   )
 }

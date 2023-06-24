@@ -12,9 +12,9 @@ export default function Sale() {
   let products_to_show = useSelector(store => store.productList.productList).slice(0, 4)
 
   return (
-    <div className={s.sales_container} id='sales'>
+    <section className={s.sales_container} id='sales'>
       <h2 className={s.sales_title}>Sale</h2>
       <ProductsList products={products_to_show} showPagination={'false'} />
-    </div>
+    </section>
   )
 }

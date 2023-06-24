@@ -21,7 +21,7 @@ export default function DiscountForm() {
   const [messageActive, setMessageActive] = useState(false)
 
   return (
-    <div className={s.discount_wrapper}>
+    <section className={s.discount_wrapper}>
       <div className={s.discount_left}>
         <img src={dwarf} alt='dwarf' className={s.discount_img} />
       </div>
@@ -45,6 +45,6 @@ export default function DiscountForm() {
         h3_text={'Congratulations!'}
         h4_text={'Now you have discount 5% on the first order!'}
       />
-    </div>
+    </section>
   )
 }

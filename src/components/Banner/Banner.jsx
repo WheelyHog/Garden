@@ -19,7 +19,7 @@ export default function Banner() {
   const slides = ['slide1', 'slide2', 'slide3']
 
   return (
-    <div className={s.banner_wrapper}>
+    <section className={s.banner_wrapper}>
       <Slider {...settings}>
         {slides.map(elem => {
           return (
@@ -38,7 +38,7 @@ export default function Banner() {
           )
         })}
       </Slider>
-    </div>
+    </section>
 
   )
 }
