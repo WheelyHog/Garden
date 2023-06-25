@@ -24,8 +24,7 @@ export const ProductListPage = ({ type }) => {
         dispatch(get_product_list_by_sale())
       }
     }
-  }, [id, type])
-
+  }, [id, type, dispatch])
 
 
   return (
