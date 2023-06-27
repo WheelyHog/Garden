@@ -1,5 +1,5 @@
 import React from 'react'
-import { base_url } from '../../asyncActions/base_url'
+import { base_url } from '../../store/asyncActions/base_url'
 import s from './CategoryItem.module.css'
 
 export default function CategoryItem({ title, image }) {

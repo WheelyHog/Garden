@@ -4,8 +4,8 @@ import { useNavigate, useParams } from 'react-router-dom'
 import Button from '../../components/UI/Button/Button'
 import s from './ProductInfoPage.module.css'
 import { add_to_cart } from '../../store/reducers/cartSlice'
-import { fetchProductInfo } from '../../asyncActions/products'
-import { base_url } from '../../asyncActions/base_url'
+import { fetchProductInfo } from '../../store/asyncActions/products'
+import { base_url } from '../../store/asyncActions/base_url'
 
 
 

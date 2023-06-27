@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { base_url } from '../../asyncActions/base_url';
+import { base_url } from '../../store/asyncActions/base_url';
 import { add_to_cart } from '../../store/reducers/cartSlice';
 import Button from '../UI/Button/Button';
 import s from './ProductItem.module.css'

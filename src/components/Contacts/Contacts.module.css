@@ -12,24 +12,29 @@
 
 .phone_number {
   font-size: var(--grand-text);
-  font-weight: var(--bold-text);
-  margin-bottom: 32px;
+  font-weight: var(--medium-text);
   white-space: nowrap;
 }
 
 .map_link {
   font-size: var(--header-text);
-  font-weight: var(--bold-text);
-  margin-bottom: var(--spacing-medium);
+  font-weight: var(--medium-text);
+  text-decoration: underline;
 }
 
 .social {
   display: flex;
-  gap: 70px;
+  gap: 34px;
   text-align: center;
   font-size: 15px;
   font-weight: var(--bold-text);
   margin-top: 30px;
+}
+
+.contact,
+.address {
+  display: flex;
+  flex-direction: column;
 }
 
 .social_img {
@@ -45,7 +50,7 @@
 .address p {
   font-size: var(--sub-header-text);
   font-weight: var(--normal-text);
-  margin-bottom: 2px;
+  margin: 20px 0 2px;
 }
 
 .address b {

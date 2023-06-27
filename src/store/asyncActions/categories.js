@@ -1,5 +1,5 @@
-import { base_url } from './base_url';
-import { get_categories } from "../store/reducers/categoriesSlice";
+import { get_categories } from "../reducers/categoriesSlice";
+import { base_url } from "./base_url";
 
 const categories_url = base_url + "/categories/all";
 

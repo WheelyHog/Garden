@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchCategoriesList } from '../../asyncActions/categories'
 import CategoriesList from '../../components/CategoriesList/CategoriesList'
-import s from './AllCategoriesPage.module.css'
+import { fetchCategoriesList } from '../../store/asyncActions/categories'
+
 
 export default function AllCategoriesPage() {
 

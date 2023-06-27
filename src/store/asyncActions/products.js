@@ -1,6 +1,7 @@
 import { base_url } from "./base_url";
-import { get_product_list_by_category, get_product_list_by_sale } from "../store/reducers/productListSlice";
-import { get_product_info } from "../store/reducers/productInfoSlice";
+
+import { get_product_info } from "../reducers/productInfoSlice";
+import { get_product_list_by_category, get_product_list_by_sale } from "../reducers/productListSlice";
 
 export function fetchProductListByCategory(id) {
   return function (dispatch) {

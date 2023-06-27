@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import s from './Map.module.css'
 import { useLoadScript, GoogleMap, Marker } from '@react-google-maps/api'
-import logo from './assets/icon.png'
+import logo from './assets/map-pin.png'
 
 export default function Map() {
 

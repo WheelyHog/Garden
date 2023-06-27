@@ -5,8 +5,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import DiscountForm from '../../components/DiscountForm/DiscountForm';
 import Sale from '../../components/Sale/Sale';
-import { fetchCategoriesList } from '../../asyncActions/categories';
-import { fetchAllProductList } from '../../asyncActions/products';
+import { fetchCategoriesList } from '../../store/asyncActions/categories';
+import { fetchAllProductList } from '../../store/asyncActions/products';
 
 export default function HomePage() {
   const dispatch = useDispatch()

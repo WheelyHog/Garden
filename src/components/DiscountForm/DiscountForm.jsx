@@ -3,8 +3,8 @@ import s from './DiscountForm.module.css'
 import dwarf from './assets/gnom.png'
 import Button from '../UI/Button/Button';
 import Input from '../UI/Input/Input';
-import { send_coupon_request } from '../../asyncActions/order';
 import PopupWindow from '../PopupWindow/PopupWindow';
+import { send_coupon_request } from '../../store/asyncActions/order';
 
 
 

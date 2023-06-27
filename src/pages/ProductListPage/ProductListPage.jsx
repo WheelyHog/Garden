@@ -5,7 +5,8 @@ import ProductsList from "../../components/ProductsList/ProductsList"
 import s from './ProductListPage.module.css'
 import Filter from '../../components/Filter/Filter'
 import { get_product_list_by_sale } from "../../store/reducers/productListSlice"
-import { fetchAllProductList, fetchProductListByCategory } from "../../asyncActions/products"
+import { fetchAllProductList, fetchProductListByCategory } from "../../store/asyncActions/products"
+
 
 export const ProductListPage = ({ type }) => {
 

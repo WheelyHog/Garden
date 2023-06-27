@@ -24,7 +24,7 @@ export default function Contacts() {
         </div>
         <div className={s.address}>
           <h3 className={s.title}>Address</h3>
-          <h3 className={s.map_link}>Linkstraße 2, 8 OG, 10785, Berlin, Deutschland</h3>
+          <a className={s.map_link} href='https://g.page/telranDE?share'>Linkstraße 2, 8 OG, 10785, Berlin, Deutschland</a>
           <p>Working Hours:</p>
           <b>24 hours a day</b>
         </div>

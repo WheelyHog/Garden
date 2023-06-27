@@ -2,8 +2,8 @@ import React from 'react'
 import s from './CartItem.module.css'
 import { RxCross1 } from 'react-icons/rx'
 import { decrement_count, increment_count, remove_from_cart } from '../../store/reducers/cartSlice';
-import { base_url } from '../../asyncActions/base_url';
 import { useDispatch } from 'react-redux';
+import { base_url } from '../../store/asyncActions/base_url';
 
 export default function CartItem({ id, title, image, count, discont_price, price }) {
   const dispatch = useDispatch()
