@@ -43,7 +43,6 @@
   transition: var(--transition);
 }
 
-
 @media (max-width: 780px) {
   .burger {
     display: flex;

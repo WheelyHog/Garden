@@ -1,13 +1,4 @@
-.discount_input {
-  height: 75px;
-  border-radius: 25px;
-  outline: none;
-  border: none;
-  font-size: var(--sub-header-text);
-  padding-left: 50px;
-}
-
-.phone_input {
+/* .phone_input {
   height: 70px;
   border: 1px solid var(--black-color);
   padding-left: 25px;
@@ -16,6 +7,24 @@
   font-size: var(--sub-header-text);
   width: 100%;
   background-color: var(--white-color);
+} */
+
+.form_control {
+  position: relative;
+}
+
+.form_control.error input,
+.form_control.error textarea {
+  border: 2px solid red;
+}
+
+.form_control.error span {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  color: brown;
+  font-size: 15px;
+  margin: 0 5px;
 }
 
 @media (max-width: 990px) {
@@ -31,8 +40,8 @@
 }
 
 @media (max-width: 400px) {
-  .discount_input {
-    height: 50px;
+  .form_control.error span {
+    top: 50px;
   }
 
   .phone_input {

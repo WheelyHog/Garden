@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { filter_by_range, filter_by_sale, sort_by_default, sort_by_name_az, sort_by_name_za, sort_by_price_asc, sort_by_price_desc } from '../../store/reducers/productListSlice';
+import {
+  filter_by_range,
+  filter_by_sale,
+  sort_by_default,
+  sort_by_name_az,
+  sort_by_name_za,
+  sort_by_price_asc,
+  sort_by_price_desc
+} from '../../store/reducers/productListSlice';
 import Input from '../UI/Input/Input';
 import s from './Filter.module.css'
 

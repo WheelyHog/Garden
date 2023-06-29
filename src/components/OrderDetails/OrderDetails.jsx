@@ -1,26 +1,16 @@
-import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { send_order } from '../../store/asyncActions/order'
-import { clear_cart } from '../../store/reducers/cartSlice'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import PopupWindow from '../PopupWindow/PopupWindow'
 import Button from '../UI/Button/Button'
-import Input from '../UI/Input/Input'
+import { Input, phoneNumber, required } from '../UI/Input/FormControls'
 import s from './OrderDetails.module.css'
+import { Field, reduxForm } from 'redux-form';
 
-export default function OrderDetails() {
-  const [messageActive, setMessageActive] = useState(false)
+export const OrderDetails = (props) => {
+  const { messageActive, setMessageActive, handleSubmit } = props
+
   const cart = useSelector(store => store.cart)
   const total_sum = cart.reduce((accum, elem) => accum + elem.count * (elem.discont_price ? elem.discont_price : elem.price), 0)
-  const dispatch = useDispatch();
-
-  const submit = (e) => {
-    e.preventDefault()
-    send_order(e.target.phone.value)
-    setMessageActive(true)
-    document.body.style.overflow = 'hidden';
-    e.target.reset()
-    dispatch(clear_cart())
-  }
 
   return (
     <div className={s.order}>
@@ -29,14 +19,14 @@ export default function OrderDetails() {
         <p className={s.order_text}>Total</p>
         <p className={s.order_amount}>{total_sum}<span> $</span></p>
       </div>
-      <form onSubmit={submit}>
-        <Input type={'tel'}
-          placeholder={'Phone number'}
-          properties={'phone_input'}
-          name={'phone'}
-          pattern={'[+]{1}[0-9]{11}'}
-          required
-        />
+      <form onSubmit={handleSubmit}>
+        <Field
+          placeholder='Phone number'
+          component={Input}
+          type='tel'
+          name='phone'
+          className={s.phone_input}
+          validate={[required, phoneNumber]} />
         <Button text={'Order'} properties={'order_btn'} disabled={cart.length === 0 ? true : false} />
       </form>
       <PopupWindow
@@ -48,3 +38,7 @@ export default function OrderDetails() {
     </div>
   )
 }
+
+export default reduxForm({
+  form: 'order'
+})(OrderDetails)

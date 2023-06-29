@@ -18,6 +18,16 @@
   color: var(--white-color);
 }
 
+.discount_input {
+  height: 75px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  font-size: var(--sub-header-text);
+  padding-left: 50px;
+  width: 100%;
+}
+
 .discount_title {
   font-size: 90px;
   font-weight: 900;
@@ -33,7 +43,7 @@
   display: flex;
   flex-direction: column;
   max-width: 470px;
-  gap: var(--spacing-large);
+  gap: 45px;
 }
 
 
@@ -75,5 +85,11 @@
 @media (max-width:500px) {
   .discount_img {
     width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .discount_input {
+    height: 50px;
   }
 }

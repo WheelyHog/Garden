@@ -1,7 +1,7 @@
 .order {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 40px;
   padding: 25px;
   max-width: 500px;
   border: 2px solid var(--black-color);
@@ -34,6 +34,18 @@ form {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-medium);
+}
+
+.phone_input {
+  height: 70px;
+  border: 1px solid var(--black-color);
+  padding-left: 25px;
+  border-radius: 20px;
+  outline: none;
+  font-size: var(--sub-header-text);
+  width: 100%;
+  background-color: var(--white-color);
+  margin-bottom: 30px;
 }
 
 .send_message {

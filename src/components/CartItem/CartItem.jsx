@@ -23,7 +23,6 @@ export default function CartItem({ id, title, image, count, discont_price, price
         <h2 className={s.discount_price}>{discont_price ? discont_price : price}$</h2>
         {discont_price && <h3 className={s.price}>{price}$</h3>}
       </div>
-
       <RxCross1 className={s.close_btn} onClick={() => dispatch(remove_from_cart(id))} />
     </div>
   )

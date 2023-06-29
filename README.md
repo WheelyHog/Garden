@@ -27,6 +27,7 @@ During the work were used:
 - GH-Pages
 - Custom UI Components
 - Redux Toolkit
+- Redux Form
 
 ### [Backend](https://github.com/HaykInanc/telran_project_backend)
 

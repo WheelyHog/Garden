@@ -7,7 +7,6 @@ import Filter from '../../components/Filter/Filter'
 import { get_product_list_by_sale } from "../../store/reducers/productListSlice"
 import { fetchAllProductList, fetchProductListByCategory } from "../../store/asyncActions/products"
 
-
 export const ProductListPage = ({ type }) => {
 
   const { id } = useParams()
@@ -27,12 +26,11 @@ export const ProductListPage = ({ type }) => {
     }
   }, [id, type, dispatch])
 
-
   return (
-    <div className={s.page_wrapper}>
+    <main className={s.page_wrapper}>
       <h2 className={s.page_title}>{titlePage.title}</h2>
       <Filter type={type} />
       <ProductsList products={productList} />
-    </div>
+    </main>
   )
 }

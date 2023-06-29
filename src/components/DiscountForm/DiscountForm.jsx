@@ -1,24 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import s from './DiscountForm.module.css'
 import dwarf from './assets/gnom.png'
 import Button from '../UI/Button/Button';
-import Input from '../UI/Input/Input';
 import PopupWindow from '../PopupWindow/PopupWindow';
-import { send_coupon_request } from '../../store/asyncActions/order';
+import { Field, reduxForm } from 'redux-form';
+import { Input, phoneNumber, required } from '../UI/Input/FormControls';
 
 
-
-export default function DiscountForm() {
-
-  const submit = (e) => {
-    e.preventDefault()
-    send_coupon_request(e.target.phone.value)
-    setMessageActive(true)
-    document.body.style.overflow = 'hidden';
-    e.target.reset()
-  }
-
-  const [messageActive, setMessageActive] = useState(false)
+export const DiscountForm = (props) => {
+  const { messageActive, setMessageActive, handleSubmit, submitting } = props
 
   return (
     <section className={s.discount_wrapper}>
@@ -28,15 +18,15 @@ export default function DiscountForm() {
       <div className={s.discount_right}>
         <p className={s.discount_title}>5% off </p>
         <p className={s.discount_subtitle}>on the first order</p>
-        <form onSubmit={submit}>
-          <Input type={'tel'}
-            placeholder={'+49'}
-            name={'phone'}
-            pattern={'[+]{1}[0-9]{11}'}
-            properties={'discount_input'}
-            required
-          />
-          <Button text={'Get a discount'} properties={'discount_btn'} />
+        <form onSubmit={handleSubmit}>
+          <Field
+            placeholder='+49'
+            component={Input}
+            type='tel'
+            name='phone'
+            className={s.discount_input}
+            validate={[required, phoneNumber]} />
+          <Button text={'Get a discount'} properties={'discount_btn'} disabled={submitting} />
         </form>
       </div>
       <PopupWindow
@@ -48,3 +38,7 @@ export default function DiscountForm() {
     </section>
   )
 }
+
+export default reduxForm({
+  form: 'discount'
+})(DiscountForm)

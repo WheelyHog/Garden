@@ -6,7 +6,6 @@ import { add_to_cart } from '../../store/reducers/cartSlice';
 import Button from '../UI/Button/Button';
 import s from './ProductItem.module.css'
 
-
 export default function ProductItem({ product }) {
   const { id, image, price, title, discont_price } = product
   const dispatch = useDispatch();
@@ -18,7 +17,7 @@ export default function ProductItem({ product }) {
   }
 
   return (
-    <NavLink to={`/products/${id}`} onClick={(e) => e.stopPropagation()}>
+    <NavLink to={`/products/${id}`} >
       <div className={s.product_item}>
         <div className={s.product_image_wrapper}>
           <img className={s.product_image} src={`${base_url}${image}`} alt={title} />

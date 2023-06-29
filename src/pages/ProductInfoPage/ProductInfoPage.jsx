@@ -7,8 +7,6 @@ import { add_to_cart } from '../../store/reducers/cartSlice'
 import { fetchProductInfo } from '../../store/asyncActions/products'
 import { base_url } from '../../store/asyncActions/base_url'
 
-
-
 export default function ProductInfoPage() {
   const { id } = useParams()
   const dispatch = useDispatch()
@@ -28,7 +26,7 @@ export default function ProductInfoPage() {
   const discount_value = Math.floor(100 - discont_price * 100 / price);
 
   return (
-    <div className={s.product_info}>
+    <main className={s.product_info}>
       <h2 className={s.product_title}>{title}</h2>
       <div className={s.product_details}>
         <div className={s.img_wrapper}>
@@ -45,6 +43,6 @@ export default function ProductInfoPage() {
           <p className={s.product_text}>{description}</p>
         </div>
       </div>
-    </div >
+    </main >
   )
 }

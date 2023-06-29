@@ -4,8 +4,10 @@ import image from './assets/404.png'
 
 export default function NotFoundPage() {
   return (
-    <div className={s.image_container}>
-      <img src={image} alt="not_found_image" />
-    </div>
+    <main className={s.image_container}>
+      <div className='container'>
+        <img src={image} alt="not_found_image" />
+      </div>
+    </main>
   )
 }

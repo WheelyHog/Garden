@@ -10,13 +10,13 @@ export default function AllCategoriesPage() {
   useEffect(() => {
     dispatch(fetchCategoriesList())
     window.scrollTo(0, 0);
-  }, [])
+  }, [dispatch])
 
   const categories = useSelector(store => store.categories)
 
   return (
-    <div>
+    <main>
       <CategoriesList categories={categories} show_btn={false} title='Categories' />
-    </div>
+    </main>
   )
 }

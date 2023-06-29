@@ -17,7 +17,7 @@ export default function ProductsList({ products, showPagination }) {
       setCurrentPage(1)
     }
     window.scrollTo(0, 0);
-  }, [products, currentPage])
+  }, [products, currentPage, countProductsPage])
 
   return (
     <div className={s.products_list_wrapper}>
