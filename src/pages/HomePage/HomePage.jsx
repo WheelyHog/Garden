@@ -17,7 +17,7 @@ export default function HomePage() {
 
   useEffect(() => {
     dispatch(fetchCategoriesList())
-    dispatch(fetchAllProductList())
+    dispatch(fetchAllProductList('sale'))
     window.scrollTo(0, 0);
   }, [dispatch])
 
